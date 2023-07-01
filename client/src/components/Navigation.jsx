@@ -28,6 +28,7 @@ const Navigation = () => {
   return (
     <nav className="navigation glass-effect">
       <Link
+        to={"/"}
         style={{
           display: "flex",
           alignItems: "center",

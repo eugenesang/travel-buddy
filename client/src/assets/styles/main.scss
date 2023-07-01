@@ -21,7 +21,13 @@ body {
     font-size: 1rem;
     line-height: 1.5;
 
-    background-color: $bg-color;
+    background: rgb(218, 255, 251);
+    background: linear-gradient(
+        90deg,
+        rgba(218, 255, 251, 1) 0%,
+        rgba(22, 216, 255, 0.3971561891358105) 35%,
+        rgba(0, 212, 255, 0.38875282779127274) 100%
+    );
 }
 
 a {
