@@ -2,7 +2,7 @@ import { Router } from 'express';
 
 const router = Router();
 
-import { createTrip, getTrip, updateTrip, deleteTrip } from '../controllers/tripController';
+import { createTrip, getTrip, updateTrip, deleteTrip } from '../controllers/tripController.js';
 
 router.post('/trips', createTrip);
 router.get('/trips/:id', getTrip);
