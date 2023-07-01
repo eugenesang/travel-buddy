@@ -20,22 +20,21 @@ TravelBuddy is a web application for collaborative travel planning, helping grou
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/travel-buddy.git
+`git clone https://github.com/your-username/travel-buddy.git`
 
 2. Install dependencies for the server:
 
-cd server
-npm install
+`cd server`
+`npm install`
 
 3. Install dependencies for the client:
 
-cd ../client
-npm install
+`cd ../client`
+`npm install`
 
 4. Start the server and client concurrently:
 
-npm run dev
-
+`npm run dev`
 
 ## Usage
 
