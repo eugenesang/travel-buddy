@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
-import Navigation from "./components/Navigation";
+import { Navigation, Footer } from "./components";
 
 import { setUser } from "./store/reducers/userSlice";
 
@@ -33,7 +33,7 @@ const App = () => {
     scrollBehavior();
 
     console.log("App.jsx: user", user);
-  }, []);
+  });
 
   return (
     <div>
@@ -43,6 +43,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
