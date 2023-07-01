@@ -1,7 +1,9 @@
 import images from './images';
-import data from './data';
+import trips from './trips';
+import features from './features';
 
 export {
     images,
-    data
+    trips,
+    features
 }

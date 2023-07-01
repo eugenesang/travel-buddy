@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 
 import { Card, Header } from "../components";
-import { data } from "../constants";
+import { trips, images, features } from "../constants";
 
 const Home = () => {
   const user = useSelector((state) => state.user.user);
@@ -17,25 +17,28 @@ const Home = () => {
     setSearch(e.target.value);
   };
 
-  const filteredTrips = data.filter((trip) => {
+  const filteredTrips = trips.filter((trip) => {
     const isMatch =
       trip.location.toLowerCase().includes(filter.toLowerCase()) &&
       trip.cost <= parseInt(search);
     return isMatch;
   });
 
-  const displayedTrips = search === "" ? data : filteredTrips;
+  const displayedTrips = search === "" ? trips : filteredTrips;
 
   return (
     <div className="container">
+      {/* Header */}
       <Header username={user ? user.name : ""} />
+
+      {/* Trip cards */}
       <div
         style={{
           width: "100%",
           minHeight: "100vh",
           backgroundColor: "#dafffb",
 
-          padding: "2rem ",
+          padding: "5rem 2rem",
 
           display: "flex",
           flexDirection: "column",
@@ -89,6 +92,87 @@ const Home = () => {
             return <Card key={index} trip={trip} />;
           })}
         </div>
+      </div>
+
+      {/* Why choose us */}
+      <div
+        className="row"
+        style={{
+          padding: "2rem",
+          gap: "5rem",
+        }}
+      >
+        <img
+          src={images.chooseus}
+          alt="image"
+          style={{
+            width: "40%",
+            height: "40%",
+          }}
+        />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: "2rem",
+          }}
+        >
+          <div
+            className="inner-container"
+            style={{
+              alignItems: "flex-start",
+            }}
+          >
+            <h1>Why Choose Us</h1>
+            <p>
+              Enjoy different experiences in every place you visit and discover
+              new and affordable adventures of course.
+            </p>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "2rem",
+            }}
+          >
+            {features.map((feature, index) => {
+              return (
+                <div
+                  key={index}
+                  style={{
+                    display: "flex",
+                    gap: "2rem",
+                    alignItems: "center",
+                  }}
+                >
+                  <div>{feature.icon}</div>
+                  <div
+                    className="inner-container"
+                    style={{
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    <h3>{feature.title}</h3>
+                    <p>{feature.description}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* World map */}
+      <div
+        className="container"
+        style={{
+          padding: "5rem 2rem",
+          backgroundColor: "#fff",
+        }}
+      >
+        <img src={images.world} alt="map" />
       </div>
     </div>
   );
