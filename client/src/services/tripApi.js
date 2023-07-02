@@ -40,7 +40,7 @@ export async function getUserTrips(userId) {
 //Delete trip
 export async function deleteTrip(tripId) {
     try {
-        const response = await instance.delete(`/api/trips/${tripId}`);
+        const response = await instance.delete(`/api/trips/delete/${tripId}`);
         return response.data.trip;
     } catch (error) {
         alert("Failed to delete trip");

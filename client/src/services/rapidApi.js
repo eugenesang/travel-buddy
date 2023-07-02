@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //Rapid api keys
-const rapidApiKey = import.meta.env.RAPID_API_KEY;
+const rapidApiKey = import.meta.env.VITE_RAPID_API_KEY;
 
 export const fetchTouristPlaces = async (location) => {
     const options = {
