@@ -1,5 +1,5 @@
 import images from "../constants/images";
-
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const Header = ({ username }) => {
@@ -27,7 +27,9 @@ const Header = ({ username }) => {
           destination information and inspiration from us!
         </p>
         <div className="row">
-          <button>Plan now</button>
+          <Link className="button" to={"/profile"}>
+            Plan now
+          </Link>
           <p>About us</p>
         </div>
       </div>

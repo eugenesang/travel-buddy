@@ -10,15 +10,15 @@ import {
   InviteFriend,
 } from "../components";
 
-import { fetchImages } from "./../services/unsplashApi";
+import { fetchImages } from "../services/unsplashApi";
 
 import {
   fetchPlaceLocation,
   fetchTouristPlaces,
   fetchHotels,
-} from "./../services/rapidApi";
+} from "../services/rapidApi";
 
-import { getTripById, deleteTrip } from "./../services/tripApi";
+import { getTripById, deleteTrip } from "../services/tripApi";
 
 const TripDetails = () => {
   const [trip, setTrip] = useState({});
@@ -27,58 +27,47 @@ const TripDetails = () => {
   const [touristPlaces, setTouristPlaces] = useState([]);
   const [hotels, setHotels] = useState([]);
 
-  // Get user from Redux store
-  const userData = useSelector((state) => state.user);
-  const { user } = userData;
-
-  // Get trip id from URL
+  const { user } = useSelector((state) => state.user);
   const { id } = useParams();
-
-  // Get history object from react-router-dom
   const navigate = useNavigate();
 
-  // Get trip details from API
   useEffect(() => {
-    setIsLoading(true);
+    const fetchTripDetails = async () => {
+      setIsLoading(true);
 
-    getTripById(id)
-      .then(async (trip) => {
+      try {
+        const trip = await getTripById(id);
         setTrip(trip);
 
-        try {
-          // Fetch images
-          const images = await fetchImages(trip.destination);
-          setImages(images);
-          // Fetch tourist places
-          const touristPlaces = await fetchTouristPlaces(trip.destination);
-          setTouristPlaces(touristPlaces);
-          // Fetch place location
-          const placeProperty = await fetchPlaceLocation(trip.destination);
+        const [fetchedImages, fetchedTouristPlaces, placeProperty] =
+          await Promise.all([
+            fetchImages(trip.destination),
+            fetchTouristPlaces(trip.destination),
+            fetchPlaceLocation(trip.destination),
+          ]);
 
-          if (placeProperty && placeProperty.lat && placeProperty.lon) {
-            // Fetch hotels using lat and lon from placeProperty
-            const hotels = await fetchHotels(
-              placeProperty.lat,
-              placeProperty.lon
-            );
-            setHotels(hotels);
-          }
-        } catch (error) {
-          console.error("Error fetching trip details:", error);
+        setImages(fetchedImages);
+        setTouristPlaces(fetchedTouristPlaces);
+
+        if (placeProperty && placeProperty.lat && placeProperty.lon) {
+          const fetchedHotels = await fetchHotels(
+            placeProperty.lat,
+            placeProperty.lon
+          );
+          setHotels(fetchedHotels);
         }
-      })
-      .catch((error) => {
-        console.error("Error fetching trip:", error);
-      })
-      .finally(() => {
+      } catch (error) {
+        console.error("Error fetching trip details:", error);
+      } finally {
         setIsLoading(false);
-      });
+      }
+    };
+
+    fetchTripDetails();
   }, [id]);
 
   const handleEdit = () => {
-    // Check if the user is the creator of the trip
     if (trip.createdBy === user._id) {
-      // Redirect to the trip edit page with the trip ID
       navigate(`/trips/${id}/edit`);
     } else {
       // Display an error message or show a notification that the user does not have permission to edit the trip
@@ -86,12 +75,9 @@ const TripDetails = () => {
   };
 
   const handleDelete = () => {
-    // Check if the user is the creator of the trip
     if (trip.createdBy === user._id) {
-      // Call the deleteTrip function from the API service
       deleteTrip(id)
         .then(() => {
-          // Redirect to the trip listing page or any other appropriate page
           navigate("/profile");
         })
         .catch((error) => {
@@ -108,34 +94,17 @@ const TripDetails = () => {
       {isLoading ? (
         <div className="container">Loading...</div>
       ) : (
-        <div
-          className="row"
-          style={{
-            alignContent: "flex-start",
-            alignItems: "flex-start",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="row" style={{ justifyContent: "space-between" }}>
           {/* Left part */}
           <div
             className="inner-container"
-            style={{
-              padding: "2rem",
-              gap: "2rem",
-            }}
+            style={{ padding: "2rem", gap: "2rem", minWidth: "60%" }}
           >
             {/* Heading */}
-            <div
-              className="row"
-              style={{
-                width: "100%",
-              }}
-            >
+            <div className="row" style={{ width: "100%" }}>
               <div
                 className="inner-container"
-                style={{
-                  alignItems: "flex-start",
-                }}
+                style={{ alignItems: "flex-start" }}
               >
                 <h1>{trip.name}</h1>
                 <p>{trip.description}</p>
@@ -150,140 +119,53 @@ const TripDetails = () => {
             {/* Event details */}
             <div
               className="inner-container"
-              style={{
-                alignItems: "flex-start",
-                width: "100%",
-              }}
+              style={{ alignItems: "flex-start", width: "100%" }}
             >
               <h1>Event Details</h1>
-              <div
-                className="row"
-                style={{
-                  gap: "2rem",
-                }}
-              >
+              <div className="row" style={{ gap: "2rem" }}>
                 <div
                   style={{
                     display: "grid",
-
                     gridTemplateColumns: "repeat(3, 1fr)",
                     gap: "1rem",
-
                     width: "100%",
                   }}
                 >
-                  <div
-                    className="glass-effect"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "1rem",
-
-                      alignItems: "flex-start",
-                      padding: "1rem",
-
-                      borderRadius: "0.5rem",
-                    }}
-                  >
-                    <h2>Start Date</h2>
-                    <p>{trip.startDate}</p>
-                  </div>
-
-                  <div
-                    className="glass-effect"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "1rem",
-
-                      alignItems: "flex-start",
-                      padding: "1rem",
-
-                      borderRadius: "0.5rem",
-                    }}
-                  >
-                    <h2>End Date</h2>
-                    <p>{trip.endDate}</p>
-                  </div>
-
-                  <div
-                    className="glass-effect"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "1rem",
-
-                      alignItems: "flex-start",
-                      padding: "1rem",
-
-                      borderRadius: "0.5rem",
-                    }}
-                  >
-                    <h2>Created By</h2>
-                    <p>{trip.createdBy}</p>
-                  </div>
-
-                  <div
-                    className="glass-effect"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "1rem",
-
-                      alignItems: "flex-start",
-                      padding: "1rem",
-
-                      borderRadius: "0.5rem",
-                    }}
-                  >
-                    <h2>Invited friends</h2>
-                    <p>No of friends invited </p>
-                  </div>
-
-                  <div
-                    className="glass-effect"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "1rem",
-
-                      alignItems: "flex-start",
-                      padding: "1rem",
-
-                      borderRadius: "0.5rem",
-                    }}
-                  >
-                    <h2>Total days</h2>
-                    <p>{trip.totalDays} Days</p>
-                  </div>
-
-                  <div
-                    className="glass-effect"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "1rem",
-
-                      alignItems: "flex-start",
-                      padding: "1rem",
-
-                      borderRadius: "0.5rem",
-                    }}
-                  >
-                    <h2>Cost for each </h2>
-                    <p>{trip.cost}</p>
-                  </div>
+                  {[
+                    { label: "Start Date", value: trip.startDate },
+                    { label: "End Date", value: trip.endDate },
+                    { label: "Created By", value: trip.createdBy },
+                    {
+                      label: "Invited friends",
+                      value: "No of friends invited",
+                    },
+                    { label: "Total days", value: `${trip.totalDays} Days` },
+                    { label: "Cost for each", value: trip.cost },
+                  ].map(({ label, value }) => (
+                    <div
+                      className="glass-effect"
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "1rem",
+                        alignItems: "flex-start",
+                        padding: "1rem",
+                        borderRadius: "0.5rem",
+                      }}
+                      key={label}
+                    >
+                      <h2>{label}</h2>
+                      <p>{value}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
 
-            {/* Places */}
+            {/* Tourist Places */}
             <div
               className="inner-container"
-              style={{
-                alignItems: "flex-start",
-                width: "100%",
-              }}
+              style={{ alignItems: "flex-start", width: "100%" }}
             >
               <h1>Tourist Places</h1>
               <div
@@ -307,16 +189,12 @@ const TripDetails = () => {
               </div>
             </div>
 
-            {/* Places */}
+            {/* Image Gallery */}
             <div
               className="inner-container"
-              style={{
-                alignItems: "flex-start",
-                width: "100%",
-              }}
+              style={{ alignItems: "flex-start", width: "100%" }}
             >
               <h1>Gallery</h1>
-
               {images.length > 0 && <ImageCarousel images={images} />}
             </div>
           </div>
@@ -350,10 +228,7 @@ const TripDetails = () => {
             {hotels.length > 0 && (
               <div
                 className="inner-container"
-                style={{
-                  alignItems: "flex-start",
-                  gap: "1rem",
-                }}
+                style={{ alignItems: "flex-start", gap: "1rem" }}
               >
                 <h1>Hotels Nearby</h1>
                 {hotels.slice(0, 4).map((hotel) => (

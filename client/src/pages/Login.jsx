@@ -9,29 +9,26 @@ const Login = () => {
   const navigate = useNavigate();
   const { isLoading, error } = useSelector((state) => state.user);
 
-  // State to store form data
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
-  // Update form data on input change
   const handleInput = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle login form submission
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       dispatch(setLoading(true));
-      const user = await loginUser(formData); // Make API request to login user
+      const user = await loginUser(formData);
       dispatch(setUser(user));
       setFormData({
         email: "",
         password: "",
       });
-      navigate("/"); // Redirect to home page
+      navigate("/");
     } catch (error) {
       dispatch(setError(error.message));
     } finally {
@@ -40,17 +37,13 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" style={{ padding: "5rem" }}>
       <h1>Login</h1>
 
-      {/* Display loading message when logging in */}
       {isLoading && <p>Loading...</p>}
-
-      {/* Display error message if login fails */}
       {error && <p>Error: {error}</p>}
 
       <form onSubmit={handleLogin}>
-        {/* Email input */}
         <input
           type="text"
           placeholder="Enter your email"
@@ -59,7 +52,6 @@ const Login = () => {
           onChange={handleInput}
         />
 
-        {/* Password input */}
         <input
           type="password"
           placeholder="Enter your password"
@@ -68,12 +60,13 @@ const Login = () => {
           onChange={handleInput}
         />
 
-        {/* Submit button */}
         <button type="submit" disabled={isLoading}>
           {isLoading ? "Logging in..." : "Login"}
         </button>
       </form>
-      <Link to={"/signup"}>Signup</Link>
+      <Link to={"/signup"}>
+        <span>or</span> Signup
+      </Link>
     </div>
   );
 };

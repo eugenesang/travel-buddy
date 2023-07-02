@@ -21,26 +21,18 @@ import { setUser } from "./store/reducers/userSlice";
 const App = () => {
   const dispatch = useDispatch();
 
-  // Check if user state exists in local storage and set it in Redux store
-  const storedUser = JSON.parse(localStorage.getItem("user"));
-  if (storedUser) {
-    dispatch(setUser(storedUser));
-  }
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser) {
+      dispatch(setUser(storedUser));
+    }
+  }, [dispatch]);
 
   const user = useSelector((state) => state.user.user);
 
-  // Custom scroll behavior to maintain scroll position
-  const scrollBehavior = () => {
-    const scrollY = window.scrollY;
-    return window.scrollTo({ top: scrollY, behavior: "auto" });
-  };
-
   useEffect(() => {
-    window.history.scrollRestoration = "manual";
-    scrollBehavior();
-
-    console.log("App.jsx: user", user);
-  });
+    window.scrollTo(0, 0); // Scroll to top on component render
+  }, []);
 
   return (
     <div>
@@ -51,18 +43,16 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
-        {user ? (
+        {user && (
           <>
             <Route path="/create-trip" element={<CreateTrip />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/trips/:id" element={<TripDetails />} />
             <Route path="/trips/:id/edit" element={<UpdateTrip />} />
           </>
-        ) : (
-          <>
-            <Route path="/create-trip" element={<Login />} />
-          </>
         )}
+
+        <Route path="/create-trip" element={<Login />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -26,23 +26,28 @@ const Signup = () => {
     e.preventDefault();
     try {
       dispatch(setLoading(true));
-      const user = await registerUser(formData); // Make API request to register user
+      const user = await registerUser(formData);
       dispatch(setUser(user));
       setFormData({
         name: "",
         email: "",
         password: "",
       });
-      navigate("/"); // Redirect to home page
+      navigate("/");
     } catch (error) {
       dispatch(setError(error.message));
     } finally {
-      dispatch(setLoading(false));
+      dispatch(setLoading(false)); // Move the setLoading(false) call to the finally block
     }
   };
 
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        padding: "5rem",
+      }}
+    >
       <h1>Signup</h1>
 
       {/* Display loading message when signing up */}
