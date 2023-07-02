@@ -3,7 +3,16 @@ import { useEffect } from "react";
 
 import { Routes, Route } from "react-router-dom";
 
-import { Home, Login, Signup, NotFound, CreateTrip, Profile } from "./pages";
+import {
+  Home,
+  Login,
+  Signup,
+  NotFound,
+  CreateTrip,
+  Profile,
+  TripDetails,
+  UpdateTrip,
+} from "./pages";
 
 import { Navigation, Footer } from "./components";
 
@@ -46,6 +55,8 @@ const App = () => {
           <>
             <Route path="/create-trip" element={<CreateTrip />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/trips/:id" element={<TripDetails />} />
+            <Route path="/trips/:id/edit" element={<UpdateTrip />} />
           </>
         ) : (
           <>

@@ -4,6 +4,8 @@ import NotFound from './NotFound';
 import Home from './Home';
 import CreateTrip from './CreateTrip';
 import Profile from './Profile';
+import TripDetails from './TripDetails';
+import UpdateTrip from './UpdateTrip';
 
 export {
     Signup,
@@ -11,5 +13,7 @@ export {
     NotFound,
     Home,
     CreateTrip,
-    Profile
+    Profile,
+    TripDetails,
+    UpdateTrip
 }

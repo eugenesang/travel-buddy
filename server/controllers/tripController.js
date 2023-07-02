@@ -72,10 +72,10 @@ export async function getAllTrips(req, res) {
 // Update a trip
 export async function updateTrip(req, res) {
     try {
-        const { name, destination, startDate, endDate } = req.body;
+        const { name, destination, startDate, endDate, description, cost } = req.body;
         const trip = await Trip.findByIdAndUpdate(
             req.params.id,
-            { name, destination, startDate, endDate },
+            { name, destination, startDate, endDate, description, cost },
             { new: true }
         );
         if (!trip) {

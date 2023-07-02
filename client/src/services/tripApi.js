@@ -37,3 +37,25 @@ export async function getUserTrips(userId) {
     }
 }
 
+//Delete trip
+export async function deleteTrip(tripId) {
+    try {
+        const response = await instance.delete(`/api/trips/${tripId}`);
+        return response.data.trip;
+    } catch (error) {
+        alert("Failed to delete trip");
+        throw new Error('Failed to delete trip');
+    }
+}
+
+//Update trip
+export async function updateTrip(tripId, tripData) {
+    try {
+        const response = await instance.put(`/api/trips/update/${tripId}`, tripData);
+        return response.data.trip;
+    } catch (error) {
+        alert("Failed to update trip");
+        throw new Error('Failed to update trip');
+    }
+}
+

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import { getUserTrips } from "../services/tripApi";
 import { Card } from "../components";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const userData = useSelector((state) => state.user);
@@ -124,6 +125,7 @@ const Profile = () => {
           {/* Render content based on active tab */}
           {activeTab === "trips" && (
             <div
+              key={filteredTrips.length}
               style={{
                 width: "100%",
                 display: "grid",
@@ -149,7 +151,7 @@ const Profile = () => {
                 ) : // If no trips, show no trips message
                 filteredTrips.length === 0 ? (
                   <div
-                    className="row"
+                    className="inner-container"
                     style={{
                       width: "100%",
                       justifyContent: "center",
@@ -158,13 +160,19 @@ const Profile = () => {
                     }}
                   >
                     <h2>No Trips Found</h2>
+                    <Link to="/create-trips" className="button">
+                      Create a Trip
+                    </Link>
                   </div>
-                ) : // Else, render trips
-                filteredTrips.length > 0 ? (
+                ) : (
+                  // Else, render trips
+
                   filteredTrips.map((trip) => (
-                    <Card key={trip.id} trip={trip} />
+                    <Link key={trip.id} to={`/trips/${trip._id}`}>
+                      <Card trip={trip} />
+                    </Link>
                   ))
-                ) : null
+                )
               }
             </div>
           )}

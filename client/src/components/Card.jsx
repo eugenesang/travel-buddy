@@ -24,8 +24,8 @@ const Card = ({ trip }) => {
         src={
           image
             ? image
-            : `https://source.unsplash.com/random/800x600?${
-                location || destination || name
+            : `https://source.unsplash.com/random/800x600?tourist place of${
+                location || destination
               }`
         }
         alt={name}
@@ -47,12 +47,12 @@ const Card = ({ trip }) => {
 Card.propTypes = {
   trip: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    destination: PropTypes.string.isRequired,
-    tripDays: PropTypes.number.isRequired,
+    destination: PropTypes.string,
+    tripDays: PropTypes.number,
     cost: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    totalDays: PropTypes.number.isRequired,
+    image: PropTypes.string,
+    location: PropTypes.string,
+    totalDays: PropTypes.number,
   }),
 };
 
