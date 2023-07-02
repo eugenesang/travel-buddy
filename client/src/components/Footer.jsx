@@ -92,7 +92,7 @@ const Footer = () => {
             }}
           >
             <h2>Contact Information</h2>
-            <p
+            <div
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -104,7 +104,7 @@ const Footer = () => {
               <p>info@tripplanner.com</p>
 
               <p>+91 8009396321</p>
-            </p>
+            </div>
           </div>
         </div>
       </div>

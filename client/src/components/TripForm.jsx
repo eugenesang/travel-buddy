@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { createTrip } from "../services/tripApi";
 
 const TripForm = () => {
-  const user = useSelector((state) => state.user);
+  const userData = useSelector((state) => state.user);
+  const { user } = userData;
 
   const navigate = useNavigate();
 

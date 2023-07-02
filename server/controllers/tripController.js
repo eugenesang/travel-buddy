@@ -3,6 +3,9 @@
 import Trip from '../models/Trip.js';
 import User from '../models/User.js';
 
+import { countDays } from '../utils/formatDate.js';
+
+
 // Create a new trip
 export async function createTrip(req, res) {
     try {
@@ -14,6 +17,7 @@ export async function createTrip(req, res) {
             startDate,
             endDate,
             cost,
+            totalDays: countDays(startDate, endDate),
             description,
             invitations,
             createdBy, // Store the user who created the trip
@@ -32,7 +36,7 @@ export async function createTrip(req, res) {
 // Get all trips of a user
 export async function getUserTrips(req, res) {
     try {
-        const user = await User.findById(req.user._id).populate('trips');
+        const user = await User.findById(req.params.id).populate('trips');
         if (!user) {
             return res.status(404).json({ error: 'User not found' });
         }
@@ -52,6 +56,16 @@ export async function getTrip(req, res) {
         res.json({ trip });
     } catch (error) {
         res.status(500).json({ error: 'Failed to get trip' });
+    }
+}
+
+// Get all trips
+export async function getAllTrips(req, res) {
+    try {
+        const trips = await Trip.find();
+        res.json({ trips });
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to get trips' });
     }
 }
 

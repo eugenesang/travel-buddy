@@ -9,5 +9,5 @@ export {
     Navigation,
     Header,
     Card,
-    TripForm
+    TripForm,
 };

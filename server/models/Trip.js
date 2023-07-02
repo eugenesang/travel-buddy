@@ -25,6 +25,9 @@ const tripSchema = new Schema({
         type: Date,
         required: true,
     },
+    totalDays: {
+        type: Number,
+    },
     createdBy: {
         type: Schema.Types.ObjectId,
         ref: 'User',

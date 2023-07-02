@@ -3,11 +3,13 @@ import Login from './Login';
 import NotFound from './NotFound';
 import Home from './Home';
 import CreateTrip from './CreateTrip';
+import Profile from './Profile';
 
 export {
     Signup,
     Login,
     NotFound,
     Home,
-    CreateTrip
+    CreateTrip,
+    Profile
 }

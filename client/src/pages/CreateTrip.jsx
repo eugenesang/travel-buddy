@@ -1,6 +1,6 @@
 import { TripForm } from "../components";
 
-const CreateTripPage = () => {
+const CreateTrip = () => {
   return (
     <div
       className="container"
@@ -18,4 +18,4 @@ const CreateTripPage = () => {
   );
 };
 
-export default CreateTripPage;
+export default CreateTrip;
