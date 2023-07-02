@@ -8,7 +8,7 @@ Welcome to Travel Buddy - Your Ultimate Trip Planner! Travel Buddy is a web appl
 
 ## Demo
 
-Watch our demo video [here](https://example.com/travel-buddy-demo).
+Watch our demo video [here](https://youtu.be/kLsPzU_MDjk).
 
 ## Features
 
