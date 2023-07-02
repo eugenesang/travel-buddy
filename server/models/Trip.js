@@ -9,6 +9,14 @@ const tripSchema = new Schema({
         type: String,
         required: true,
     },
+    description: {
+        type: String,
+        required: true,
+    },
+    cost: {
+        type: Number,
+        required: true,
+    },
     startDate: {
         type: Date,
         required: true,
@@ -23,15 +31,8 @@ const tripSchema = new Schema({
     },
     invitations: [
         {
-            invitedUser: {
-                type: Schema.Types.ObjectId,
-                ref: 'User',
-            },
-            accepted: {
-                type: Boolean,
-                default: false,
-            },
-        },
+            type: String,
+        }
     ],
 });
 

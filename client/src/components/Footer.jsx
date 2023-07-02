@@ -6,7 +6,7 @@ const Footer = () => {
           className="row"
           style={{
             gap: "5rem",
-            padding: "2rem ",
+            padding: "4rem 2rem",
             alignItems: "flex-start",
             justifyContent: "flex-start",
           }}
@@ -18,11 +18,13 @@ const Footer = () => {
               alignItems: "flex-start",
             }}
           >
-            <h2>About Us</h2>
+            <h2>
+              Travel <span>Buddy</span>{" "}
+            </h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-              accumsan et viverra justo commodo.
+              We are a passionate team of travel enthusiasts dedicated to
+              providing unforgettable experiences and helping you create
+              lifelong memories.
             </p>
           </div>
 
@@ -60,7 +62,7 @@ const Footer = () => {
               alignItems: "flex-start",
             }}
           >
-            <h2>Quick Links</h2>
+            <h2>Our Socials</h2>
             <ul
               style={{
                 display: "flex",
@@ -69,16 +71,16 @@ const Footer = () => {
               }}
             >
               <li>
-                <a href="/">Home</a>
+                <a href="/">Facebook</a>
               </li>
               <li>
-                <a href="/trips">Trips</a>
+                <a href="/trips">Instagram</a>
               </li>
               <li>
-                <a href="/explore">Explore</a>
+                <a href="/explore">Linkedin</a>
               </li>
               <li>
-                <a href="/contact">Contact Us</a>
+                <a href="/contact">Twitter</a>
               </li>
             </ul>
           </div>
@@ -97,11 +99,11 @@ const Footer = () => {
                 gap: "0.5rem",
               }}
             >
-              1234 TripPlanner St, City, Country
-              <br />
-              info@tripplanner.com
-              <br />
-              +1 234 567 890
+              <p>1234 TripPlanner, New Delhi, India</p>
+
+              <p>info@tripplanner.com</p>
+
+              <p>+91 8009396321</p>
             </p>
           </div>
         </div>

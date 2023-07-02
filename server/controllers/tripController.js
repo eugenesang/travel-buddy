@@ -6,21 +6,26 @@ import User from '../models/User.js';
 // Create a new trip
 export async function createTrip(req, res) {
     try {
-        const { name, destination, startDate, endDate } = req.body;
+        const { name, destination, startDate, endDate, cost, createdBy, invitations, description } = req.body;
+        console.log(req.body);
         const trip = await Trip.create({
             name,
             destination,
             startDate,
             endDate,
-            createdBy: req.user._id, // Store the user who created the trip
+            cost,
+            description,
+            invitations,
+            createdBy, // Store the user who created the trip
         });
 
         // Update the user's trips array
-        await User.findByIdAndUpdate(req.user._id, { $push: { trips: trip._id } });
+        await User.findByIdAndUpdate(createdBy, { $push: { trips: trip._id } });
 
-        res.status(201).json({ trip });
+        res.status(201).json({ message: 'Trip created successfully' });
     } catch (error) {
         res.status(500).json({ error: 'Failed to create trip' });
+        console.log(error);
     }
 }
 

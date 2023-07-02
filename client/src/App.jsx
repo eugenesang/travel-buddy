@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 import { Routes, Route } from "react-router-dom";
 
-import { Home, Login, Signup, NotFound } from "./pages";
+import { Home, Login, Signup, NotFound, CreateTrip } from "./pages";
 
 import { Navigation, Footer } from "./components";
 
@@ -38,8 +38,12 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+
+        {user && <Route path="/create-trip" element={<CreateTrip />} />}
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

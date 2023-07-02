@@ -9,7 +9,7 @@ const Navigation = () => {
   const mainMenu = [
     {
       label: "Home",
-      link: "/home",
+      link: "/",
     },
     {
       label: "Trips",
@@ -56,7 +56,7 @@ const Navigation = () => {
       </div>
       {user ? (
         <div className="row">
-          <Link to="/trips">Trips</Link>
+          <Link to="/create-trip">Create Trip</Link>
           <Link to="/profile" className="button">
             Profile
           </Link>
