@@ -3,6 +3,35 @@ import axios from "axios";
 //Rapid api keys
 const rapidApiKey = import.meta.env.VITE_RAPID_API_KEY;
 
+export const travelData = async (location) => {
+
+    const options = {
+        method: 'POST',
+        url: 'https://travel-advisor.p.rapidapi.com/locations/v2/search',
+        params: {
+            currency: 'USD',
+            units: 'km',
+            lang: 'en_US'
+        },
+        headers: {
+            'content-type': 'application/json',
+            'X-RapidAPI-Key': '9457f0eec1msha0ab45c45f03fafp1b3d9cjsn9c3be8e4084d',
+            'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+        },
+        data: {
+            query: 'chiang mai',
+            updateToken: ''
+        }
+    };
+
+    try {
+        const response = await axios.request(options);
+        console.log(response.data);
+    } catch (error) {
+        console.error(error);
+    }
+};
+
 export const fetchTouristPlaces = async (location) => {
     const options = {
         method: "GET",
