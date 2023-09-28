@@ -67,7 +67,7 @@ const TripDetails = () => {
   }, [id]);
 
   const handleEdit = () => {
-    if (trip.createdBy === user._id) {
+    if (trip?.createdBy === user?._id) {
       navigate(`/trips/${id}/edit`);
     } else {
       // Display an error message or show a notification that the user does not have permission to edit the trip
@@ -75,7 +75,7 @@ const TripDetails = () => {
   };
 
   const handleDelete = () => {
-    if (trip.createdBy === user._id) {
+    if (trip?.createdBy === user?._id) {
       deleteTrip(id)
         .then(() => {
           navigate("/profile");
@@ -106,8 +106,8 @@ const TripDetails = () => {
                 className="inner-container"
                 style={{ alignItems: "flex-start" }}
               >
-                <h1>{trip.name}</h1>
-                <p>{trip.description}</p>
+                <h1>{trip?.name}</h1>
+                <p>{trip?.description}</p>
               </div>
               <div className="row">
                 <button onClick={handleEdit}>Edit</button>
@@ -132,15 +132,15 @@ const TripDetails = () => {
                   }}
                 >
                   {[
-                    { label: "Start Date", value: trip.startDate },
-                    { label: "End Date", value: trip.endDate },
-                    { label: "Created By", value: trip.createdBy },
+                    { label: "Start Date", value: trip?.startDate },
+                    { label: "End Date", value: trip?.endDate },
+                    { label: "Created By", value: trip?.createdBy },
                     {
                       label: "Invited friends",
                       value: "No of friends invited",
                     },
-                    { label: "Total days", value: `${trip.totalDays} Days` },
-                    { label: "Cost for each", value: trip.cost },
+                    { label: "Total days", value: `${trip?.totalDays} Days` },
+                    { label: "Cost for each", value: trip?.cost },
                   ].map(({ label, value }) => (
                     <div
                       className="glass-effect"
@@ -176,14 +176,14 @@ const TripDetails = () => {
                   width: "100%",
                 }}
               >
-                {touristPlaces.slice(0, 3).map((location) => (
+                {touristPlaces?.slice(0, 3).map((location) => (
                   <TouristLocationCard
-                    key={location.dest_id}
-                    image={location.image_url}
-                    description={location.label}
-                    location={`${location.region}, ${location.country}`}
-                    name={location.name}
-                    numHotels={location.nr_hotels}
+                    key={location?.dest_id}
+                    image={location?.image_url}
+                    description={location?.label}
+                    location={`${location?.region}, ${location?.country}`}
+                    name={location?.name}
+                    numHotels={location?.nr_hotels}
                   />
                 ))}
               </div>
@@ -195,7 +195,7 @@ const TripDetails = () => {
               style={{ alignItems: "flex-start", width: "100%" }}
             >
               <h1>Gallery</h1>
-              {images.length > 0 && <ImageCarousel images={images} />}
+              {images?.length > 0 && <ImageCarousel images={images} />}
             </div>
           </div>
 
@@ -225,22 +225,22 @@ const TripDetails = () => {
                 />
               </div>
             </div>
-            {hotels.length > 0 && (
+            {hotels?.length > 0 && (
               <div
                 className="inner-container"
                 style={{ alignItems: "flex-start", gap: "1rem" }}
               >
                 <h1>Hotels Nearby</h1>
-                {hotels.slice(0, 4).map((hotel) => (
+                {hotels?.slice(0, 4).map((hotel) => (
                   <HotelCard
-                    key={hotel.hotel_name}
-                    hotelName={hotel.hotel_name}
-                    address={hotel.address}
-                    reviewScore={hotel.review_score}
-                    price={hotel.min_total_price}
-                    imageURL={hotel.max_photo_url}
-                    websiteURL={hotel.urL}
-                    zip={hotel.zip}
+                    key={hotel?.hotel_name}
+                    hotelName={hotel?.hotel_name}
+                    address={hotel?.address}
+                    reviewScore={hotel?.review_score}
+                    price={hotel?.min_total_price}
+                    imageURL={hotel?.max_photo_url}
+                    websiteURL={hotel?.urL}
+                    zip={hotel?.zip}
                   />
                 ))}
               </div>
