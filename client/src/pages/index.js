@@ -6,6 +6,7 @@ import CreateTrip from './CreateTrip';
 import Profile from './Profile';
 import TripDetails from './TripDetails';
 import UpdateTrip from './UpdateTrip';
+import EditProfile from './EditProfile';
 
 export {
     Signup,
@@ -15,5 +16,6 @@ export {
     CreateTrip,
     Profile,
     TripDetails,
-    UpdateTrip
+    UpdateTrip,
+    EditProfile
 }
