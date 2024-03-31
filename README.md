@@ -1,6 +1,6 @@
 # Travel Buddy - Your Ultimate Trip Planner
 
-![Travel Buddy Logo](https://ik.imagekit.io/officialprashant/TravelBuddy_-_Group_Travel_Planning_Made_Easy_nVzRcioZ9.png?updatedAt=1688318144361)
+![Travel Buddy Logo](./screenshot.png)
 
 ## Introduction
 
