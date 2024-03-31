@@ -9,6 +9,7 @@ const Footer = () => {
             padding: "4rem 2rem",
             alignItems: "flex-start",
             justifyContent: "flex-start",
+            flexWrap: "wrap"
           }}
         >
           <div
