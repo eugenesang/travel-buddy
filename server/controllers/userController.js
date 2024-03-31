@@ -1,5 +1,4 @@
 // userController.js
-
 import User from '../models/User.js';
 
 // Register a new user
@@ -44,5 +43,58 @@ export async function updateUserProfile(req, res) {
         res.json({ user });
     } catch (error) {
         res.status(500).json({ error: 'Failed to update user profile' });
+    }
+}
+
+//Update one by one
+
+export async function updateName(req, res){
+    try {
+        const {name, id} = req.body;
+
+        const user = await User.findByIdAndUpdate(id, {name}, {new: true});
+
+        if(!user){
+            return res.status(404).json({error: "User not found"})
+        };
+
+        return res.status(200).json({user});
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({error: "Failed to update user name"});
+    } 
+}
+
+export async function updateAbout(req, res){
+    try {
+        const {about, id} = req.body;
+
+        const user = await User.findByIdAndUpdate(id, {about}, {new: true});
+
+        if(!user){
+            return res.status(404).json({error: "User not found"});
+        }
+
+        return res.status(200).json({user});
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({error: "Failed to update user about"});
+    }
+}
+
+export async function updateLocation(req, res){
+    try {
+        const {city, country, id} = req.body;
+
+        const user = await User.findByIdAndUpdate(id, {"location.city": city, "location.country": country}, {new: true});
+
+        if(!user){
+            return res.status(404).json({error: "User not found"});
+        }
+
+        return res.status(200).json({user});
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({error: "Failed to update user location"});
     }
 }
