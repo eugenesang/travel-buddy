@@ -21,6 +21,20 @@ const userSchema = new Schema({
             ref: 'Trip',
         },
     ],
+    location: {
+        city: String,
+        country: String
+    },
+    about: {
+        type: String,
+        default: "New Travel Buddy"
+    },
+    profilePhoto: {
+        type: String,
+        default: '/dp/user-profile-icon.jpg'
+    }
+}, {
+    timestamps: true
 });
 
 // Hash password before saving to the database
