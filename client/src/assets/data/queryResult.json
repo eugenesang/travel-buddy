@@ -1,0 +1,1388 @@
+{
+    "data": {
+        "AppPresentation_queryAppSearch": {
+            "__typename": "AppPresentation_QueryAppSearchResponse",
+            "container": {
+                "__typename": "AppPresentation_SearchResponseContainer",
+                "searchTitle": {
+                    "__typename": "AppPresentation_LocalizedString",
+                    "string": "\"Nairobi\"",
+                    "debugValueKey": null
+                }
+            },
+            "sections": [
+                {
+                    "__typename": "AppPresentation_ListTitle",
+                    "listTitle": {
+                        "__typename": "AppPresentation_LocalizedString",
+                        "string": "Top result",
+                        "debugValueKey": null
+                    },
+                    "subTitle": null,
+                    "trackingTitle": "ListTitleSection_SRP_RESOLVED_ITEMS_0",
+                    "trackingKey": "{\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_0\",\"sn\":\"Search\"}",
+                    "stableDiffingType": "ListTitleSection_SRP_RESOLVED_ITEMS_0",
+                    "clusterId": "SRP_RESOLVED_ITEMS_0",
+                    "tooltip": null,
+                    "seeAll": null,
+                    "label": null
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "GeoHorizontalStandardCard_GEO_294207_SRP_RESOLVED_ITEMS_0",
+                    "trackingKey": "{\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_1\",\"ctt\":\"GEO\",\"lid\":294207,\"sn\":\"Search\"}",
+                    "stableDiffingType": "GeoHorizontalStandardCard_GEO_294207_SRP_RESOLVED_ITEMS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_HorizontalStandardCard",
+                        "badge": null,
+                        "trackingKey": "{\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_1\",\"ctt\":\"GEO\",\"lid\":294207,\"sn\":\"Search\"}",
+                        "trackingTitle": "GeoHorizontalStandardCard_GEO_294207",
+                        "stableDiffingType": "GeoHorizontalStandardCard_GEO_294207",
+                        "isSaved": false,
+                        "saveId": {
+                            "__typename": "Trips_ReferenceV2",
+                            "id": "294207",
+                            "type": "location"
+                        },
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Nairobi",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Kenya, Africa"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": null,
+                        "distance": null,
+                        "commerceButtons": null,
+                        "labels": [],
+                        "descriptiveText": null,
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppList",
+                                "url": "/AppList-g294207-a_contentType.geo.html",
+                                "nonCanonicalUrl": "/AppList-g294207-a_contentType.geo.html",
+                                "typedParams": {
+                                    "__typename": "Routing_AppListParameters",
+                                    "contentType": "geo",
+                                    "geoId": 294207,
+                                    "isCollectionView": null,
+                                    "isList": null,
+                                    "isMap": null,
+                                    "isNearby": null,
+                                    "nearLocationId": null,
+                                    "nearLocationType": null,
+                                    "pagee": null,
+                                    "sort": null,
+                                    "sortOrder": null,
+                                    "routingFilters": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Nairobi",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        },
+                        "cardPhoto": {
+                            "__typename": "AppPresentation_PhotoItem",
+                            "sizes": {
+                                "__typename": "AppPresentation_PhotoItemSizeDynamic",
+                                "maxHeight": 1677,
+                                "maxWidth": 2981,
+                                "urlTemplate": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e2/a2/39/2017-10-04-12-largejpg.jpg?w={width}&h={height}&s=1"
+                            }
+                        },
+                        "closureInfo": null
+                    },
+                    "clusterId": "SRP_RESOLVED_ITEMS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SecondaryButton",
+                    "clusterId": null,
+                    "trackingKey": "{\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_2\",\"sn\":\"Search\"}",
+                    "trackingTitle": "AddListingSection",
+                    "stableDiffingType": "AddListingSection",
+                    "link": {
+                        "__typename": "AppPresentation_InternalLink",
+                        "route": {
+                            "__typename": "Routing_Route",
+                            "fragment": null,
+                            "page": "CreateListing",
+                            "url": "/CreateListing.html",
+                            "nonCanonicalUrl": "/CreateListing.html",
+                            "typedParams": {
+                                "__typename": "Routing_CreateListingParameters"
+                            }
+                        },
+                        "webviewRoute": null,
+                        "text": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Add a missing place",
+                            "debugValueKey": null
+                        },
+                        "accessibilityString": null,
+                        "trackingContext": "server_addAMissingPlace_srp"
+                    },
+                    "icon": "add-place"
+                },
+                {
+                    "__typename": "AppPresentation_ListTitle",
+                    "listTitle": {
+                        "__typename": "AppPresentation_LocalizedString",
+                        "string": "More results",
+                        "debugValueKey": null
+                    },
+                    "subTitle": null,
+                    "trackingTitle": "SearchMoreResultsTitleSection",
+                    "trackingKey": "{\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_3\",\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsTitleSection",
+                    "clusterId": null,
+                    "tooltip": null,
+                    "seeAll": null,
+                    "label": null
+                },
+                {
+                    "__typename": "AppPresentation_ChipCardCarousel",
+                    "chipCardCarouselTitle": null,
+                    "chipCardCarouselText": null,
+                    "trackingKey": "{\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_4\",\"sn\":\"Search\"}",
+                    "trackingTitle": "ChipCardCarouselSection_SRP_MORE_RESULTS_FILTERS",
+                    "clusterId": "SRP_MORE_RESULTS_FILTERS",
+                    "stableDiffingType": "ChipCardCarouselSection_SRP_MORE_RESULTS_FILTERS",
+                    "chipContent": [
+                        {
+                            "__typename": "AppPresentation_FilterChipCard",
+                            "trackingKey": "{\"cfid\":\"DESTINATIONS\",\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_4_0\",\"ctt\":\"FILTER\",\"sn\":\"Search\"}",
+                            "trackingTitle": "FilterChipCard_DESTINATIONS",
+                            "stableDiffingType": "FilterChipCard_DESTINATIONS",
+                            "icon": null,
+                            "selected": false,
+                            "title": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "Destinations",
+                                "debugValueKey": null
+                            },
+                            "bubbleRating": null,
+                            "updateLink": {
+                                "__typename": "AppPresentation_UpdateLink",
+                                "text": null,
+                                "route": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "nonCanonicalUrl": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "typedParams": {
+                                        "__typename": "Routing_AppSearchParameters",
+                                        "routingFilters": null,
+                                        "force": false,
+                                        "geoId": null,
+                                        "query": "Nairobi",
+                                        "referringViewUrl": null
+                                    }
+                                },
+                                "routeKey": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": null,
+                                    "nonCanonicalUrl": null,
+                                    "typedParams": null
+                                },
+                                "autoLoad": false,
+                                "updateToken": "eyJ2ZXIiOiJ2MiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2IiwidmVyc2lvbiI6IjEifQ.eyJvYmplY3QiOiJ7XCJAY1wiOlwiLlVwZGF0ZVRva2VuXCIsXCJ0eXBlXCI6XCJGSUxURVJJTkdcIixcImNsdXN0ZXJJZHNcIjpbXCJTUlBfTU9SRV9SRVNVTFRTXzFcIixcIlNSUF9NT1JFX1JFU1VMVFNfMFwiLFwiU1JQX01PUkVfUkVTVUxUU19GSUxURVJTXCJdLFwicHJvdmlkZXJVcGRhdGVUb2tlbnNcIjp7XCJTUlBfU0VBUkNIX0ZJTFRFUlwiOntcIkBjXCI6XCJjb20udHJpcGFkdmlzb3Iuc2VydmljZS5hcHMuYWRhcHRlcnMuc2VhcmNoLlNlYXJjaEZpbHRlclVwZGF0ZVRva2VuXCIsXCJmaWx0ZXJJZFwiOlwiREVTVElOQVRJT05TXCIsXCJkYXRhVHlwZXNcIjpbXCJMT0NBVElPTlwiXSxcImxvY2F0aW9uVHlwZXNcIjpbXCJHRU9cIl0sXCJyZXF1ZXN0XCI6e1wicXVlcnlcIjpcIk5haXJvYmlcIixcImxvY2FsZVwiOlwiZW5fVVNcIixcImxpbWl0XCI6MTAsXCJmaWx0ZXJzXCI6e1wiZGF0YVR5cGVzXCI6W1wiTE9DQVRJT05cIl0sXCJsb2NhdGlvblR5cGVzXCI6W1wiR0VPXCIsXCJBQ0NPTU1PREFUSU9OXCIsXCJBVFRSQUNUSU9OXCIsXCJBVFRSQUNUSU9OX1BST0RVQ1RcIixcIkVBVEVSWVwiXX0sXCJhZGRpdGlvbmFsRmllbGRzXCI6W1wiU05JUFBFVFwiXSxcIm9mZnNldFwiOjAsXCJzY29wZVwiOntcImxvY2F0aW9uSWRcIjpudWxsLFwiY2VudGVyXCI6bnVsbH0sXCJsb2NhdGlvbklkc1RvRXhjbHVkZVwiOlsyOTQyMDddLFwiY2F0ZWdvcnlGaWx0ZXJJZHNcIjpbXCJERVNUSU5BVElPTlNcIixcIkhPVEVMU1wiLFwiQVRUUkFDVElPTlNcIixcIlJFU1RBVVJBTlRTXCIsXCJBQ1RJVklUSUVTXCIsXCJGT1JVTVNcIl19LFwiaXNTZWxlY3RlZEZpbHRlclwiOnRydWUsXCJzZWFyY2hTZXNzaW9uSWRcIjpcIjQ3MzRiYTJkLTNmNDMtNGUwOC05NWM4LTMyYTZhNzgwYzFlZVwiLFwic2VhcmNoUmVmaW5lbWVudElkXCI6XCJiYTg3MDFkNS0yM2I5LTQ5ZTktYWM0My1jYTAxNGFkNmVlZDFcIn19LFwicG9sbGluZ1NlcXVlbmNlTnVtXCI6MH0ifQ.MjRlNTU4MmItMGIyNS00YTI1LTk4NDUtYTY0YjFiNzYxODc0Lk1FVUNJUUNoeDY1aDlmUmthN3ZCR25kbzJTbGZhaTdNX01rQkVVS3JOOW84bXJnSlJBSWdCUUsxNDRLSHllQTZnc3NqWDBDd25ScDRMMk9hNm04X1RjUi1UMHltWlJn",
+                                "accessibilityString": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "View more items in this list",
+                                    "debugValueKey": null
+                                },
+                                "trackingContext": "server_update"
+                            }
+                        },
+                        {
+                            "__typename": "AppPresentation_FilterChipCard",
+                            "trackingKey": "{\"cfid\":\"HOTELS\",\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_4_1\",\"ctt\":\"FILTER\",\"sn\":\"Search\"}",
+                            "trackingTitle": "FilterChipCard_HOTELS",
+                            "stableDiffingType": "FilterChipCard_HOTELS",
+                            "icon": null,
+                            "selected": false,
+                            "title": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "Hotels",
+                                "debugValueKey": null
+                            },
+                            "bubbleRating": null,
+                            "updateLink": {
+                                "__typename": "AppPresentation_UpdateLink",
+                                "text": null,
+                                "route": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "nonCanonicalUrl": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "typedParams": {
+                                        "__typename": "Routing_AppSearchParameters",
+                                        "routingFilters": null,
+                                        "force": false,
+                                        "geoId": null,
+                                        "query": "Nairobi",
+                                        "referringViewUrl": null
+                                    }
+                                },
+                                "routeKey": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": null,
+                                    "nonCanonicalUrl": null,
+                                    "typedParams": null
+                                },
+                                "autoLoad": false,
+                                "updateToken": "eyJ2ZXIiOiJ2MiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2IiwidmVyc2lvbiI6IjEifQ.eyJvYmplY3QiOiJ7XCJAY1wiOlwiLlVwZGF0ZVRva2VuXCIsXCJ0eXBlXCI6XCJGSUxURVJJTkdcIixcImNsdXN0ZXJJZHNcIjpbXCJTUlBfTU9SRV9SRVNVTFRTXzFcIixcIlNSUF9NT1JFX1JFU1VMVFNfMFwiLFwiU1JQX01PUkVfUkVTVUxUU19GSUxURVJTXCJdLFwicHJvdmlkZXJVcGRhdGVUb2tlbnNcIjp7XCJTUlBfU0VBUkNIX0ZJTFRFUlwiOntcIkBjXCI6XCJjb20udHJpcGFkdmlzb3Iuc2VydmljZS5hcHMuYWRhcHRlcnMuc2VhcmNoLlNlYXJjaEZpbHRlclVwZGF0ZVRva2VuXCIsXCJmaWx0ZXJJZFwiOlwiSE9URUxTXCIsXCJkYXRhVHlwZXNcIjpbXCJMT0NBVElPTlwiXSxcImxvY2F0aW9uVHlwZXNcIjpbXCJBQ0NPTU1PREFUSU9OXCJdLFwicmVxdWVzdFwiOntcInF1ZXJ5XCI6XCJOYWlyb2JpXCIsXCJsb2NhbGVcIjpcImVuX1VTXCIsXCJsaW1pdFwiOjEwLFwiZmlsdGVyc1wiOntcImRhdGFUeXBlc1wiOltcIkxPQ0FUSU9OXCJdLFwibG9jYXRpb25UeXBlc1wiOltcIkdFT1wiLFwiQUNDT01NT0RBVElPTlwiLFwiQVRUUkFDVElPTlwiLFwiQVRUUkFDVElPTl9QUk9EVUNUXCIsXCJFQVRFUllcIl19LFwiYWRkaXRpb25hbEZpZWxkc1wiOltcIlNOSVBQRVRcIl0sXCJvZmZzZXRcIjowLFwic2NvcGVcIjp7XCJsb2NhdGlvbklkXCI6bnVsbCxcImNlbnRlclwiOm51bGx9LFwibG9jYXRpb25JZHNUb0V4Y2x1ZGVcIjpbMjk0MjA3XSxcImNhdGVnb3J5RmlsdGVySWRzXCI6W1wiREVTVElOQVRJT05TXCIsXCJIT1RFTFNcIixcIkFUVFJBQ1RJT05TXCIsXCJSRVNUQVVSQU5UU1wiLFwiQUNUSVZJVElFU1wiLFwiRk9SVU1TXCJdfSxcImlzU2VsZWN0ZWRGaWx0ZXJcIjp0cnVlLFwic2VhcmNoU2Vzc2lvbklkXCI6XCI0NzM0YmEyZC0zZjQzLTRlMDgtOTVjOC0zMmE2YTc4MGMxZWVcIixcInNlYXJjaFJlZmluZW1lbnRJZFwiOlwiNTBkMDA4YzktY2FjZC00NDMxLWFhNzQtZTVkYTJkMGIwNGRjXCJ9fSxcInBvbGxpbmdTZXF1ZW5jZU51bVwiOjB9In0.MjRlNTU4MmItMGIyNS00YTI1LTk4NDUtYTY0YjFiNzYxODc0Lk1FWUNJUURnc2dmZ0ZQLUtURjJyaWFaODh1NGRDUFV3aFpCQkVibzVheUE2UzlweXRnSWhBSzJjQ1l0d0hCeUdXcEw3Z1ptTnphYXNnQXh0SG5UdGVZZ0VILW5oRWFkOQ",
+                                "accessibilityString": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "View more items in this list",
+                                    "debugValueKey": null
+                                },
+                                "trackingContext": "server_update"
+                            }
+                        },
+                        {
+                            "__typename": "AppPresentation_FilterChipCard",
+                            "trackingKey": "{\"cfid\":\"ATTRACTIONS\",\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_4_2\",\"ctt\":\"FILTER\",\"sn\":\"Search\"}",
+                            "trackingTitle": "FilterChipCard_ATTRACTIONS",
+                            "stableDiffingType": "FilterChipCard_ATTRACTIONS",
+                            "icon": null,
+                            "selected": false,
+                            "title": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "Attractions",
+                                "debugValueKey": null
+                            },
+                            "bubbleRating": null,
+                            "updateLink": {
+                                "__typename": "AppPresentation_UpdateLink",
+                                "text": null,
+                                "route": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "nonCanonicalUrl": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "typedParams": {
+                                        "__typename": "Routing_AppSearchParameters",
+                                        "routingFilters": null,
+                                        "force": false,
+                                        "geoId": null,
+                                        "query": "Nairobi",
+                                        "referringViewUrl": null
+                                    }
+                                },
+                                "routeKey": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": null,
+                                    "nonCanonicalUrl": null,
+                                    "typedParams": null
+                                },
+                                "autoLoad": false,
+                                "updateToken": "eyJ2ZXIiOiJ2MiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2IiwidmVyc2lvbiI6IjEifQ.eyJvYmplY3QiOiJ7XCJAY1wiOlwiLlVwZGF0ZVRva2VuXCIsXCJ0eXBlXCI6XCJGSUxURVJJTkdcIixcImNsdXN0ZXJJZHNcIjpbXCJTUlBfTU9SRV9SRVNVTFRTXzFcIixcIlNSUF9NT1JFX1JFU1VMVFNfMFwiLFwiU1JQX01PUkVfUkVTVUxUU19GSUxURVJTXCJdLFwicHJvdmlkZXJVcGRhdGVUb2tlbnNcIjp7XCJTUlBfU0VBUkNIX0ZJTFRFUlwiOntcIkBjXCI6XCJjb20udHJpcGFkdmlzb3Iuc2VydmljZS5hcHMuYWRhcHRlcnMuc2VhcmNoLlNlYXJjaEZpbHRlclVwZGF0ZVRva2VuXCIsXCJmaWx0ZXJJZFwiOlwiQVRUUkFDVElPTlNcIixcImRhdGFUeXBlc1wiOltcIkxPQ0FUSU9OXCJdLFwibG9jYXRpb25UeXBlc1wiOltcIkFUVFJBQ1RJT05cIl0sXCJyZXF1ZXN0XCI6e1wicXVlcnlcIjpcIk5haXJvYmlcIixcImxvY2FsZVwiOlwiZW5fVVNcIixcImxpbWl0XCI6MTAsXCJmaWx0ZXJzXCI6e1wiZGF0YVR5cGVzXCI6W1wiTE9DQVRJT05cIl0sXCJsb2NhdGlvblR5cGVzXCI6W1wiR0VPXCIsXCJBQ0NPTU1PREFUSU9OXCIsXCJBVFRSQUNUSU9OXCIsXCJBVFRSQUNUSU9OX1BST0RVQ1RcIixcIkVBVEVSWVwiXX0sXCJhZGRpdGlvbmFsRmllbGRzXCI6W1wiU05JUFBFVFwiXSxcIm9mZnNldFwiOjAsXCJzY29wZVwiOntcImxvY2F0aW9uSWRcIjpudWxsLFwiY2VudGVyXCI6bnVsbH0sXCJsb2NhdGlvbklkc1RvRXhjbHVkZVwiOlsyOTQyMDddLFwiY2F0ZWdvcnlGaWx0ZXJJZHNcIjpbXCJERVNUSU5BVElPTlNcIixcIkhPVEVMU1wiLFwiQVRUUkFDVElPTlNcIixcIlJFU1RBVVJBTlRTXCIsXCJBQ1RJVklUSUVTXCIsXCJGT1JVTVNcIl19LFwiaXNTZWxlY3RlZEZpbHRlclwiOnRydWUsXCJzZWFyY2hTZXNzaW9uSWRcIjpcIjQ3MzRiYTJkLTNmNDMtNGUwOC05NWM4LTMyYTZhNzgwYzFlZVwiLFwic2VhcmNoUmVmaW5lbWVudElkXCI6XCJlMzFmMWQ0Yi00MGFlLTQ0NjYtYjdkNC1mYTc4NTcyYThlNDZcIn19LFwicG9sbGluZ1NlcXVlbmNlTnVtXCI6MH0ifQ.MjRlNTU4MmItMGIyNS00YTI1LTk4NDUtYTY0YjFiNzYxODc0Lk1FVUNJSE1UY1NzS3pRdDFxSVBwZ1RoUFJwcTV5RlZEa0ZwWDNFcXRlMGJxR0VWVUFpRUE1WktFSTNTQkhvXzQxeTlZTTRUMlZMNzdlU3l1OXBGNUhrZ3ZTN1hZZThv",
+                                "accessibilityString": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "View more items in this list",
+                                    "debugValueKey": null
+                                },
+                                "trackingContext": "server_update"
+                            }
+                        },
+                        {
+                            "__typename": "AppPresentation_FilterChipCard",
+                            "trackingKey": "{\"cfid\":\"RESTAURANTS\",\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_4_3\",\"ctt\":\"FILTER\",\"sn\":\"Search\"}",
+                            "trackingTitle": "FilterChipCard_RESTAURANTS",
+                            "stableDiffingType": "FilterChipCard_RESTAURANTS",
+                            "icon": null,
+                            "selected": false,
+                            "title": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "Restaurants",
+                                "debugValueKey": null
+                            },
+                            "bubbleRating": null,
+                            "updateLink": {
+                                "__typename": "AppPresentation_UpdateLink",
+                                "text": null,
+                                "route": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "nonCanonicalUrl": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "typedParams": {
+                                        "__typename": "Routing_AppSearchParameters",
+                                        "routingFilters": null,
+                                        "force": false,
+                                        "geoId": null,
+                                        "query": "Nairobi",
+                                        "referringViewUrl": null
+                                    }
+                                },
+                                "routeKey": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": null,
+                                    "nonCanonicalUrl": null,
+                                    "typedParams": null
+                                },
+                                "autoLoad": false,
+                                "updateToken": "eyJ2ZXIiOiJ2MiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2IiwidmVyc2lvbiI6IjEifQ.eyJvYmplY3QiOiJ7XCJAY1wiOlwiLlVwZGF0ZVRva2VuXCIsXCJ0eXBlXCI6XCJGSUxURVJJTkdcIixcImNsdXN0ZXJJZHNcIjpbXCJTUlBfTU9SRV9SRVNVTFRTXzFcIixcIlNSUF9NT1JFX1JFU1VMVFNfMFwiLFwiU1JQX01PUkVfUkVTVUxUU19GSUxURVJTXCJdLFwicHJvdmlkZXJVcGRhdGVUb2tlbnNcIjp7XCJTUlBfU0VBUkNIX0ZJTFRFUlwiOntcIkBjXCI6XCJjb20udHJpcGFkdmlzb3Iuc2VydmljZS5hcHMuYWRhcHRlcnMuc2VhcmNoLlNlYXJjaEZpbHRlclVwZGF0ZVRva2VuXCIsXCJmaWx0ZXJJZFwiOlwiUkVTVEFVUkFOVFNcIixcImRhdGFUeXBlc1wiOltcIkxPQ0FUSU9OXCJdLFwibG9jYXRpb25UeXBlc1wiOltcIkVBVEVSWVwiXSxcInJlcXVlc3RcIjp7XCJxdWVyeVwiOlwiTmFpcm9iaVwiLFwibG9jYWxlXCI6XCJlbl9VU1wiLFwibGltaXRcIjoxMCxcImZpbHRlcnNcIjp7XCJkYXRhVHlwZXNcIjpbXCJMT0NBVElPTlwiXSxcImxvY2F0aW9uVHlwZXNcIjpbXCJHRU9cIixcIkFDQ09NTU9EQVRJT05cIixcIkFUVFJBQ1RJT05cIixcIkFUVFJBQ1RJT05fUFJPRFVDVFwiLFwiRUFURVJZXCJdfSxcImFkZGl0aW9uYWxGaWVsZHNcIjpbXCJTTklQUEVUXCJdLFwib2Zmc2V0XCI6MCxcInNjb3BlXCI6e1wibG9jYXRpb25JZFwiOm51bGwsXCJjZW50ZXJcIjpudWxsfSxcImxvY2F0aW9uSWRzVG9FeGNsdWRlXCI6WzI5NDIwN10sXCJjYXRlZ29yeUZpbHRlcklkc1wiOltcIkRFU1RJTkFUSU9OU1wiLFwiSE9URUxTXCIsXCJBVFRSQUNUSU9OU1wiLFwiUkVTVEFVUkFOVFNcIixcIkFDVElWSVRJRVNcIixcIkZPUlVNU1wiXX0sXCJpc1NlbGVjdGVkRmlsdGVyXCI6dHJ1ZSxcInNlYXJjaFNlc3Npb25JZFwiOlwiNDczNGJhMmQtM2Y0My00ZTA4LTk1YzgtMzJhNmE3ODBjMWVlXCIsXCJzZWFyY2hSZWZpbmVtZW50SWRcIjpcIjkxYzk4ZWNmLTVkMTQtNDQ0My04ZGQ0LTkyYjIyNDg1NWZjN1wifX0sXCJwb2xsaW5nU2VxdWVuY2VOdW1cIjowfSJ9.MjRlNTU4MmItMGIyNS00YTI1LTk4NDUtYTY0YjFiNzYxODc0Lk1FVUNJRk5UaTc3S21yaXpENlc5ZHB1YlJhb2IzWHpSdFRZTnpLRnlUMGJNRm9FQkFpRUE4SmRySV9JYUx2dk5CN3ZTNHF1ay1Ua0hRV1R4bnJaSWhycjJCU2dvSU9n",
+                                "accessibilityString": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "View more items in this list",
+                                    "debugValueKey": null
+                                },
+                                "trackingContext": "server_update"
+                            }
+                        },
+                        {
+                            "__typename": "AppPresentation_FilterChipCard",
+                            "trackingKey": "{\"cfid\":\"ACTIVITIES\",\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_4_4\",\"ctt\":\"FILTER\",\"sn\":\"Search\"}",
+                            "trackingTitle": "FilterChipCard_ACTIVITIES",
+                            "stableDiffingType": "FilterChipCard_ACTIVITIES",
+                            "icon": null,
+                            "selected": false,
+                            "title": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "Activities",
+                                "debugValueKey": null
+                            },
+                            "bubbleRating": null,
+                            "updateLink": {
+                                "__typename": "AppPresentation_UpdateLink",
+                                "text": null,
+                                "route": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "nonCanonicalUrl": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "typedParams": {
+                                        "__typename": "Routing_AppSearchParameters",
+                                        "routingFilters": null,
+                                        "force": false,
+                                        "geoId": null,
+                                        "query": "Nairobi",
+                                        "referringViewUrl": null
+                                    }
+                                },
+                                "routeKey": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": null,
+                                    "nonCanonicalUrl": null,
+                                    "typedParams": null
+                                },
+                                "autoLoad": false,
+                                "updateToken": "eyJ2ZXIiOiJ2MiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2IiwidmVyc2lvbiI6IjEifQ.eyJvYmplY3QiOiJ7XCJAY1wiOlwiLlVwZGF0ZVRva2VuXCIsXCJ0eXBlXCI6XCJGSUxURVJJTkdcIixcImNsdXN0ZXJJZHNcIjpbXCJTUlBfTU9SRV9SRVNVTFRTXzFcIixcIlNSUF9NT1JFX1JFU1VMVFNfMFwiLFwiU1JQX01PUkVfUkVTVUxUU19GSUxURVJTXCJdLFwicHJvdmlkZXJVcGRhdGVUb2tlbnNcIjp7XCJTUlBfU0VBUkNIX0ZJTFRFUlwiOntcIkBjXCI6XCJjb20udHJpcGFkdmlzb3Iuc2VydmljZS5hcHMuYWRhcHRlcnMuc2VhcmNoLlNlYXJjaEZpbHRlclVwZGF0ZVRva2VuXCIsXCJmaWx0ZXJJZFwiOlwiQUNUSVZJVElFU1wiLFwiZGF0YVR5cGVzXCI6W1wiTE9DQVRJT05cIl0sXCJsb2NhdGlvblR5cGVzXCI6W1wiQVRUUkFDVElPTl9QUk9EVUNUXCJdLFwicmVxdWVzdFwiOntcInF1ZXJ5XCI6XCJOYWlyb2JpXCIsXCJsb2NhbGVcIjpcImVuX1VTXCIsXCJsaW1pdFwiOjEwLFwiZmlsdGVyc1wiOntcImRhdGFUeXBlc1wiOltcIkxPQ0FUSU9OXCJdLFwibG9jYXRpb25UeXBlc1wiOltcIkdFT1wiLFwiQUNDT01NT0RBVElPTlwiLFwiQVRUUkFDVElPTlwiLFwiQVRUUkFDVElPTl9QUk9EVUNUXCIsXCJFQVRFUllcIl19LFwiYWRkaXRpb25hbEZpZWxkc1wiOltcIlNOSVBQRVRcIl0sXCJvZmZzZXRcIjowLFwic2NvcGVcIjp7XCJsb2NhdGlvbklkXCI6bnVsbCxcImNlbnRlclwiOm51bGx9LFwibG9jYXRpb25JZHNUb0V4Y2x1ZGVcIjpbMjk0MjA3XSxcImNhdGVnb3J5RmlsdGVySWRzXCI6W1wiREVTVElOQVRJT05TXCIsXCJIT1RFTFNcIixcIkFUVFJBQ1RJT05TXCIsXCJSRVNUQVVSQU5UU1wiLFwiQUNUSVZJVElFU1wiLFwiRk9SVU1TXCJdfSxcImlzU2VsZWN0ZWRGaWx0ZXJcIjp0cnVlLFwic2VhcmNoU2Vzc2lvbklkXCI6XCI0NzM0YmEyZC0zZjQzLTRlMDgtOTVjOC0zMmE2YTc4MGMxZWVcIixcInNlYXJjaFJlZmluZW1lbnRJZFwiOlwiMzQ0MmIzNDktOTc0NS00OThlLTgyY2QtYWYzYzc0MWE2ZWNhXCJ9fSxcInBvbGxpbmdTZXF1ZW5jZU51bVwiOjB9In0.MjRlNTU4MmItMGIyNS00YTI1LTk4NDUtYTY0YjFiNzYxODc0Lk1FWUNJUUNvQWNDVHUxSElqRURKT0FPbU5DRTk2eE03ZnBlYUJwTVV6U29hVVE4NWZnSWhBUHZOWFBVOUZTMzA4Z3BPclZ0VVZCMXc5bUt5MVAwd2w2MURqazBCZEVWdA",
+                                "accessibilityString": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "View more items in this list",
+                                    "debugValueKey": null
+                                },
+                                "trackingContext": "server_update"
+                            }
+                        },
+                        {
+                            "__typename": "AppPresentation_FilterChipCard",
+                            "trackingKey": "{\"cfid\":\"FORUMS\",\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_4_5\",\"ctt\":\"FILTER\",\"sn\":\"Search\"}",
+                            "trackingTitle": "FilterChipCard_FORUMS",
+                            "stableDiffingType": "FilterChipCard_FORUMS",
+                            "icon": null,
+                            "selected": false,
+                            "title": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "Forums",
+                                "debugValueKey": null
+                            },
+                            "bubbleRating": null,
+                            "updateLink": {
+                                "__typename": "AppPresentation_UpdateLink",
+                                "text": null,
+                                "route": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "nonCanonicalUrl": "/AppSearch-a_query.Nairobi-a_force.false",
+                                    "typedParams": {
+                                        "__typename": "Routing_AppSearchParameters",
+                                        "routingFilters": null,
+                                        "force": false,
+                                        "geoId": null,
+                                        "query": "Nairobi",
+                                        "referringViewUrl": null
+                                    }
+                                },
+                                "routeKey": {
+                                    "__typename": "Routing_Route",
+                                    "fragment": null,
+                                    "page": "AppSearch",
+                                    "url": null,
+                                    "nonCanonicalUrl": null,
+                                    "typedParams": null
+                                },
+                                "autoLoad": false,
+                                "updateToken": "eyJ2ZXIiOiJ2MiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2IiwidmVyc2lvbiI6IjEifQ.eyJvYmplY3QiOiJ7XCJAY1wiOlwiLlVwZGF0ZVRva2VuXCIsXCJ0eXBlXCI6XCJGSUxURVJJTkdcIixcImNsdXN0ZXJJZHNcIjpbXCJTUlBfTU9SRV9SRVNVTFRTXzFcIixcIlNSUF9NT1JFX1JFU1VMVFNfMFwiLFwiU1JQX01PUkVfUkVTVUxUU19GSUxURVJTXCJdLFwicHJvdmlkZXJVcGRhdGVUb2tlbnNcIjp7XCJTUlBfU0VBUkNIX0ZJTFRFUlwiOntcIkBjXCI6XCJjb20udHJpcGFkdmlzb3Iuc2VydmljZS5hcHMuYWRhcHRlcnMuc2VhcmNoLlNlYXJjaEZpbHRlclVwZGF0ZVRva2VuXCIsXCJmaWx0ZXJJZFwiOlwiRk9SVU1TXCIsXCJkYXRhVHlwZXNcIjpbXCJGT1JVTVwiXSxcImxvY2F0aW9uVHlwZXNcIjpbXSxcInJlcXVlc3RcIjp7XCJxdWVyeVwiOlwiTmFpcm9iaVwiLFwibG9jYWxlXCI6XCJlbl9VU1wiLFwibGltaXRcIjoxMCxcImZpbHRlcnNcIjp7XCJkYXRhVHlwZXNcIjpbXCJMT0NBVElPTlwiXSxcImxvY2F0aW9uVHlwZXNcIjpbXCJHRU9cIixcIkFDQ09NTU9EQVRJT05cIixcIkFUVFJBQ1RJT05cIixcIkFUVFJBQ1RJT05fUFJPRFVDVFwiLFwiRUFURVJZXCJdfSxcImFkZGl0aW9uYWxGaWVsZHNcIjpbXCJTTklQUEVUXCJdLFwib2Zmc2V0XCI6MCxcInNjb3BlXCI6e1wibG9jYXRpb25JZFwiOm51bGwsXCJjZW50ZXJcIjpudWxsfSxcImxvY2F0aW9uSWRzVG9FeGNsdWRlXCI6WzI5NDIwN10sXCJjYXRlZ29yeUZpbHRlcklkc1wiOltcIkRFU1RJTkFUSU9OU1wiLFwiSE9URUxTXCIsXCJBVFRSQUNUSU9OU1wiLFwiUkVTVEFVUkFOVFNcIixcIkFDVElWSVRJRVNcIixcIkZPUlVNU1wiXX0sXCJpc1NlbGVjdGVkRmlsdGVyXCI6dHJ1ZSxcInNlYXJjaFNlc3Npb25JZFwiOlwiNDczNGJhMmQtM2Y0My00ZTA4LTk1YzgtMzJhNmE3ODBjMWVlXCIsXCJzZWFyY2hSZWZpbmVtZW50SWRcIjpcIjRmOGNhOTlmLTBhNTAtNGQ3Ny1hYjRlLTU1MmQ2ZTllZjZmOVwifX0sXCJwb2xsaW5nU2VxdWVuY2VOdW1cIjowfSJ9.MjRlNTU4MmItMGIyNS00YTI1LTk4NDUtYTY0YjFiNzYxODc0Lk1FVUNJRW5TUzROWDlPbzNxMFhheFliTEZKVXpfZy10Z2tzazdKTTM2d3pvUU9rVUFpRUE5S0x1T0NQcml3V0E1TDJVM1Q2RE1RWVlCMl9uLTRJRFJmTXlfcmJ6cXBB",
+                                "accessibilityString": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "View more items in this list",
+                                    "debugValueKey": null
+                                },
+                                "trackingContext": "server_update"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_attraction_311535_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":4.5,\"rc\":3538,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_5\",\"ctt\":\"LOCATION\",\"pt\":\"attraction\",\"lid\":311535,\"pir\":4,\"mid\":36791092,\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_attraction_311535_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":4.5,\"rc\":3538,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_5\",\"ctt\":\"LOCATION\",\"pt\":\"attraction\",\"lid\":311535,\"pir\":4,\"mid\":36791092,\"sn\":\"Search\"}",
+                        "trackingTitle": "SearchMoreResultsPOICard_attraction_311535",
+                        "stableDiffingType": "SearchMoreResultsPOICard_attraction_311535",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Nairobi National Park",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 4.5,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "3,538",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "ATTRACTION",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "First, we went to <span class='underline'>Nairobi</span> National Park as a daytrip, a special place where"
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d311535-r928169270-Nairobi_National_Park-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d311535-r928169270-Nairobi_National_Park-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 311535,
+                                    "review": 928169270
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=attraction&contentId=311535",
+                                "nonCanonicalUrl": "/AppDetail?contentType=attraction&contentId=311535",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "311535",
+                                    "contentType": "attraction",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Nairobi National Park",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_hotel_13547776_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":5.0,\"rc\":1592,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_6\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"itr\":true,\"lid\":13547776,\"pir\":1,\"mid\":387699076,\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_hotel_13547776_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":5.0,\"rc\":1592,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_6\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"itr\":true,\"lid\":13547776,\"pir\":1,\"mid\":387699076,\"sn\":\"Search\"}",
+                        "trackingTitle": "SearchMoreResultsPOICard_hotel_13547776",
+                        "stableDiffingType": "SearchMoreResultsPOICard_hotel_13547776",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Movenpick Hotel & Residences Nairobi",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 5.0,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "1,592",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "HOTEL",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "The view of <span class='underline'>nairobi</span> was lovely with the rotating resturant."
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d13547776-r937664117-Movenpick_Hotel_Residences_Nairobi-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d13547776-r937664117-Movenpick_Hotel_Residences_Nairobi-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 13547776,
+                                    "review": 937664117
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=hotel&contentId=13547776",
+                                "nonCanonicalUrl": "/AppDetail?contentType=hotel&contentId=13547776",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "13547776",
+                                    "contentType": "hotel",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Movenpick Hotel & Residences Nairobi",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_hotel_640508_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":4.5,\"rc\":1669,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_7\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":640508,\"pir\":21,\"mid\":620752155,\"sn\":\"Search\",\"ibs\":true}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_hotel_640508_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":4.5,\"rc\":1669,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_7\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":640508,\"pir\":21,\"mid\":620752155,\"sn\":\"Search\",\"ibs\":true}",
+                        "trackingTitle": "SearchMoreResultsPOICard_hotel_640508",
+                        "stableDiffingType": "SearchMoreResultsPOICard_hotel_640508",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Best Western Plus Meridian Hotel",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 4.5,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "1,669",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "HOTEL",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "Best accommodation one can get around CBD <span class='underline'>Nairobi.</span>"
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d640508-r939594984-Best_Western_Plus_Meridian_Hotel-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d640508-r939594984-Best_Western_Plus_Meridian_Hotel-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 640508,
+                                    "review": 939594984
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=hotel&contentId=640508",
+                                "nonCanonicalUrl": "/AppDetail?contentType=hotel&contentId=640508",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "640508",
+                                    "contentType": "hotel",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Best Western Plus Meridian Hotel",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_hotel_4091780_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":4.5,\"rc\":1644,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_8\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":4091780,\"pir\":11,\"mid\":724735132,\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_hotel_4091780_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":4.5,\"rc\":1644,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_8\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":4091780,\"pir\":11,\"mid\":724735132,\"sn\":\"Search\"}",
+                        "trackingTitle": "SearchMoreResultsPOICard_hotel_4091780",
+                        "stableDiffingType": "SearchMoreResultsPOICard_hotel_4091780",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Villa Rosa Kempinski Nairobi",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 4.5,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "1,644",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "HOTEL",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "special.... that was one of the best hospitality ive ever experienced in <span class='underline'>Nairobi.</span>"
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d4091780-r944333576-Villa_Rosa_Kempinski_Nairobi-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d4091780-r944333576-Villa_Rosa_Kempinski_Nairobi-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 4091780,
+                                    "review": 944333576
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=hotel&contentId=4091780",
+                                "nonCanonicalUrl": "/AppDetail?contentType=hotel&contentId=4091780",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "4091780",
+                                    "contentType": "hotel",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Villa Rosa Kempinski Nairobi",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_hotel_302829_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":4.5,\"rc\":1826,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_9\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":302829,\"pir\":25,\"mid\":715813138,\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_hotel_302829_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":4.5,\"rc\":1826,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_9\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":302829,\"pir\":25,\"mid\":715813138,\"sn\":\"Search\"}",
+                        "trackingTitle": "SearchMoreResultsPOICard_hotel_302829",
+                        "stableDiffingType": "SearchMoreResultsPOICard_hotel_302829",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Sarova Stanley",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 4.5,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "1,826",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "HOTEL",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "of my time in <span class='underline'>Nairobi</span>!"
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d302829-r939765102-Sarova_Stanley-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d302829-r939765102-Sarova_Stanley-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 302829,
+                                    "review": 939765102
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=hotel&contentId=302829",
+                                "nonCanonicalUrl": "/AppDetail?contentType=hotel&contentId=302829",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "302829",
+                                    "contentType": "hotel",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Sarova Stanley",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_attraction_1553310_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":5.0,\"rc\":3175,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_10\",\"ctt\":\"LOCATION\",\"pt\":\"attraction\",\"lid\":1553310,\"pir\":158,\"mid\":351394108,\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_attraction_1553310_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":5.0,\"rc\":3175,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_10\",\"ctt\":\"LOCATION\",\"pt\":\"attraction\",\"lid\":1553310,\"pir\":158,\"mid\":351394108,\"sn\":\"Search\"}",
+                        "trackingTitle": "SearchMoreResultsPOICard_attraction_1553310",
+                        "stableDiffingType": "SearchMoreResultsPOICard_attraction_1553310",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Natural World Kenya Safaris",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 5.0,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "3,175",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "ATTRACTION",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "<span class='underline'>Nairobi</span> National Park is simply a must-do."
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d1553310-r937951404-Natural_World_Kenya_Safaris-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d1553310-r937951404-Natural_World_Kenya_Safaris-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 1553310,
+                                    "review": 937951404
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=attraction&contentId=1553310",
+                                "nonCanonicalUrl": "/AppDetail?contentType=attraction&contentId=1553310",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "1553310",
+                                    "contentType": "attraction",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Natural World Kenya Safaris",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_hotel_1860203_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":4.5,\"rc\":1780,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_11\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":1860203,\"pir\":12,\"mid\":719522612,\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_hotel_1860203_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":4.5,\"rc\":1780,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_11\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":1860203,\"pir\":12,\"mid\":719522612,\"sn\":\"Search\"}",
+                        "trackingTitle": "SearchMoreResultsPOICard_hotel_1860203",
+                        "stableDiffingType": "SearchMoreResultsPOICard_hotel_1860203",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Sankara Nairobi, Autograph Collection",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 4.5,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "1,780",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "HOTEL",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "I had fantastic time at Sankara <span class='underline'>Nairobi</span> at my last stay."
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d1860203-r941774137-Sankara_Nairobi_Autograph_Collection-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d1860203-r941774137-Sankara_Nairobi_Autograph_Collection-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 1860203,
+                                    "review": 941774137
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=hotel&contentId=1860203",
+                                "nonCanonicalUrl": "/AppDetail?contentType=hotel&contentId=1860203",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "1860203",
+                                    "contentType": "hotel",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Sankara Nairobi, Autograph Collection",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_hotel_13991898_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":4.5,\"rc\":1620,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_12\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":13991898,\"pir\":4,\"mid\":729513910,\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_hotel_13991898_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":4.5,\"rc\":1620,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_12\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":13991898,\"pir\":4,\"mid\":729513910,\"sn\":\"Search\"}",
+                        "trackingTitle": "SearchMoreResultsPOICard_hotel_13991898",
+                        "stableDiffingType": "SearchMoreResultsPOICard_hotel_13991898",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Crowne Plaza Nairobi Airport",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 4.5,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "1,620",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "HOTEL",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "Super comfortable and convenient hotel close to the <span class='underline'>Nairobi</span> International"
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d13991898-r929609317-Crowne_Plaza_Nairobi_Airport-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d13991898-r929609317-Crowne_Plaza_Nairobi_Airport-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 13991898,
+                                    "review": 929609317
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=hotel&contentId=13991898",
+                                "nonCanonicalUrl": "/AppDetail?contentType=hotel&contentId=13991898",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "13991898",
+                                    "contentType": "hotel",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Crowne Plaza Nairobi Airport",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_restaurant_7d589d83-cb90-4750-8892-11b2116eb84a_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":4.0,\"rc\":5369,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_13\",\"ctt\":\"LOCATION\",\"pt\":\"restaurant\",\"lid\":809397,\"pir\":27,\"mid\":432804709,\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_restaurant_7d589d83-cb90-4750-8892-11b2116eb84a_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":4.0,\"rc\":5369,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_13\",\"ctt\":\"LOCATION\",\"pt\":\"restaurant\",\"lid\":809397,\"pir\":27,\"mid\":432804709,\"sn\":\"Search\"}",
+                        "trackingTitle": "SearchMoreResultsPOICard_restaurant_7d589d83-cb90-4750-8892-11b2116eb84a",
+                        "stableDiffingType": "SearchMoreResultsPOICard_restaurant_7d589d83-cb90-4750-8892-11b2116eb84a",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "The Carnivore Restaurant",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "$$ - $$$ • Steakhouse • African • Barbecue"
+                        },
+                        "secondaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 4.0,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "5,369",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "RESTAURANT",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "Absolute meat feast in <span class='underline'>Nairobi.</span>"
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d809397-r927235885-The_Carnivore_Restaurant-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d809397-r927235885-The_Carnivore_Restaurant-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 809397,
+                                    "review": 927235885
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=restaurant&contentId=7d589d83-cb90-4750-8892-11b2116eb84a",
+                                "nonCanonicalUrl": "/AppDetail?contentType=restaurant&contentId=7d589d83-cb90-4750-8892-11b2116eb84a",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "7d589d83-cb90-4750-8892-11b2116eb84a",
+                                    "contentType": "restaurant",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for The Carnivore Restaurant",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SingleCard",
+                    "trackingTitle": "SearchMoreResultsPOICard_hotel_1158294_SRP_MORE_RESULTS_0",
+                    "trackingKey": "{\"br\":4.5,\"rc\":1820,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_14\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":1158294,\"pir\":20,\"mid\":627949522,\"sn\":\"Search\"}",
+                    "stableDiffingType": "SearchMoreResultsPOICard_hotel_1158294_SRP_MORE_RESULTS_0",
+                    "appSearchCardContent": {
+                        "__typename": "AppPresentation_NoImageStandardCard",
+                        "trackingKey": "{\"br\":4.5,\"rc\":1820,\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_14\",\"ctt\":\"LOCATION\",\"pt\":\"hotel\",\"lid\":1158294,\"pir\":20,\"mid\":627949522,\"sn\":\"Search\"}",
+                        "trackingTitle": "SearchMoreResultsPOICard_hotel_1158294",
+                        "stableDiffingType": "SearchMoreResultsPOICard_hotel_1158294",
+                        "cardTitle": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Tribe Hotel",
+                            "debugValueKey": null
+                        },
+                        "primaryInfo": {
+                            "__typename": "AppPresentation_JoinedLocalizableObjects",
+                            "text": "Nairobi, Kenya"
+                        },
+                        "secondaryInfo": null,
+                        "bubbleRating": {
+                            "__typename": "AppPresentation_BubbleRating",
+                            "rating": 4.5,
+                            "numberReviews": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "1,820",
+                                "debugValueKey": null
+                            }
+                        },
+                        "labels": [
+                            {
+                                "__typename": "AppPresentation_SecondaryLabel",
+                                "text": {
+                                    "__typename": "AppPresentation_LocalizedString",
+                                    "string": "HOTEL",
+                                    "debugValueKey": null
+                                }
+                            }
+                        ],
+                        "descriptiveText": {
+                            "__typename": "AppPresentation_HtmlLink",
+                            "text": {
+                                "__typename": "AppPresentation_HtmlString",
+                                "text": "my first visit ever to Kenya to be with my daughter who now lives in <span class='underline'>Nairobi.</span>"
+                            },
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "ShowUserReviews",
+                                "url": "/ShowUserReviews-g294207-d1158294-r942399256-Tribe_Hotel-Nairobi.html",
+                                "nonCanonicalUrl": "/ShowUserReviews-g294207-d1158294-r942399256-Tribe_Hotel-Nairobi.html",
+                                "typedParams": {
+                                    "__typename": "Routing_ShowUserReviewsParameters",
+                                    "detailId": 1158294,
+                                    "review": 942399256
+                                }
+                            },
+                            "trackingContext": "server_snippet"
+                        },
+                        "cardLink": {
+                            "__typename": "AppPresentation_InternalLink",
+                            "route": {
+                                "__typename": "Routing_Route",
+                                "fragment": null,
+                                "page": "AppDetail",
+                                "url": "/AppDetail?contentType=hotel&contentId=1158294",
+                                "nonCanonicalUrl": "/AppDetail?contentType=hotel&contentId=1158294",
+                                "typedParams": {
+                                    "__typename": "Routing_AppDetailParameters",
+                                    "contentId": "1158294",
+                                    "contentType": "hotel",
+                                    "spAttributionToken": null,
+                                    "wasPlusShown": null
+                                }
+                            },
+                            "webviewRoute": null,
+                            "text": null,
+                            "accessibilityString": {
+                                "__typename": "AppPresentation_LocalizedString",
+                                "string": "View details for Tribe Hotel",
+                                "debugValueKey": null
+                            },
+                            "trackingContext": "server_card"
+                        }
+                    },
+                    "clusterId": "SRP_MORE_RESULTS_0"
+                },
+                {
+                    "__typename": "AppPresentation_SecondaryButton",
+                    "clusterId": "SRP_MORE_RESULTS_1",
+                    "trackingKey": "{\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5_15\",\"bt\":\"NEXT_PAGE\",\"sn\":\"Search\"}",
+                    "trackingTitle": "NextPageButtonSection_SRP_MORE_RESULTS_1",
+                    "stableDiffingType": "NextPageButtonSection_SRP_MORE_RESULTS_1",
+                    "link": {
+                        "__typename": "AppPresentation_UpdateLink",
+                        "text": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "Show more",
+                            "debugValueKey": null
+                        },
+                        "route": {
+                            "__typename": "Routing_Route",
+                            "fragment": null,
+                            "page": "AppSearch",
+                            "url": "/AppSearch-a_query.Nairobi-a_force.false",
+                            "nonCanonicalUrl": "/AppSearch-a_query.Nairobi-a_force.false",
+                            "typedParams": {
+                                "__typename": "Routing_AppSearchParameters",
+                                "routingFilters": null,
+                                "force": false,
+                                "geoId": null,
+                                "query": "Nairobi",
+                                "referringViewUrl": null
+                            }
+                        },
+                        "routeKey": {
+                            "__typename": "Routing_Route",
+                            "fragment": null,
+                            "page": "AppSearch",
+                            "url": null,
+                            "nonCanonicalUrl": null,
+                            "typedParams": null
+                        },
+                        "autoLoad": true,
+                        "updateToken": "eyJ2ZXIiOiJ2MiIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2IiwidmVyc2lvbiI6IjEifQ.eyJvYmplY3QiOiJ7XCJAY1wiOlwiLlBhZ2luZ1VwZGF0ZVRva2VuXCIsXCJjbHVzdGVySWRzXCI6W1wiU1JQX01PUkVfUkVTVUxUU18xXCIsXCJTUlBfTU9SRV9SRVNVTFRTX0ZJTFRFUlNcIl0sXCJwcm92aWRlclVwZGF0ZVRva2Vuc1wiOntcIlNSUF9QQUdFXCI6e1wiQGNcIjpcImNvbS50cmlwYWR2aXNvci5zZXJ2aWNlLmFwcy5hZGFwdGVycy5zZWFyY2guU2VhcmNoUGFnZVVwZGF0ZVRva2VuXCIsXCJwYWdlSWRcIjoxLFwicmVxdWVzdFwiOntcInF1ZXJ5XCI6XCJOYWlyb2JpXCIsXCJsb2NhbGVcIjpcImVuX1VTXCIsXCJsaW1pdFwiOjEwLFwiZmlsdGVyc1wiOntcImRhdGFUeXBlc1wiOltcIkxPQ0FUSU9OXCJdLFwibG9jYXRpb25UeXBlc1wiOltcIkdFT1wiLFwiQUNDT01NT0RBVElPTlwiLFwiQVRUUkFDVElPTlwiLFwiQVRUUkFDVElPTl9QUk9EVUNUXCIsXCJFQVRFUllcIl19LFwiYWRkaXRpb25hbEZpZWxkc1wiOltcIlNOSVBQRVRcIl0sXCJvZmZzZXRcIjoxMCxcInNjb3BlXCI6e1wibG9jYXRpb25JZFwiOm51bGwsXCJjZW50ZXJcIjpudWxsfSxcImxvY2F0aW9uSWRzVG9FeGNsdWRlXCI6WzI5NDIwN10sXCJjYXRlZ29yeUZpbHRlcklkc1wiOltcIkRFU1RJTkFUSU9OU1wiLFwiSE9URUxTXCIsXCJBVFRSQUNUSU9OU1wiLFwiUkVTVEFVUkFOVFNcIixcIkFDVElWSVRJRVNcIixcIkZPUlVNU1wiXX0sXCJzZWFyY2hTZXNzaW9uSWRcIjpcIjQ3MzRiYTJkLTNmNDMtNGUwOC05NWM4LTMyYTZhNzgwYzFlZVwiLFwic2VhcmNoUmVmaW5lbWVudElkXCI6XCJhN2I3MzJkZC0zZDhlLTRiN2UtYmJmMi1hMTNjMGM4ODU3M2RcIixcInNlbGVjdGVkRmlsdGVySWRcIjpudWxsfX0sXCJwYWdlSW5kZXhcIjoxLFwidHlwZVwiOlwiUEFHSU5BVElPTlwiLFwicG9sbGluZ1NlcXVlbmNlTnVtXCI6MH0ifQ.MjRlNTU4MmItMGIyNS00YTI1LTk4NDUtYTY0YjFiNzYxODc0Lk1FUUNJSFdEUnR0ZzZ4T2xHbDBTVy1XWF9LTFJkcS1ndlhZcFJqMTN4SUZwbTlmeUFpQXNHdzFIOXpGcXpqZUlXT1ZfZ1JVZUE3ZnZwTHdfM1EySzZCN2V0bTl5aFE",
+                        "accessibilityString": {
+                            "__typename": "AppPresentation_LocalizedString",
+                            "string": "View more items in this list",
+                            "debugValueKey": null
+                        },
+                        "trackingContext": "server_showMore"
+                    },
+                    "icon": null
+                }
+            ],
+            "statusV2": {
+                "__typename": "AppPresentation_SuccessQueryResponseStatus",
+                "partial": false,
+                "pollingStatus": null
+            },
+            "updatedClusterIds": [],
+            "trackingKey": "{\"ik\":\"1b4c538e-1940-4c6c-b563-1273396e5bc5\",\"sn\":\"Search\"}"
+        }
+    }
+}
