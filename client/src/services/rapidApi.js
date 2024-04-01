@@ -19,7 +19,7 @@ export const travelData = async (location) => {
             'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
         },
         data: {
-            query: 'chiang mai',
+            query: location,
             updateToken: ''
         }
     };
