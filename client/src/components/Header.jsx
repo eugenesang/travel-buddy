@@ -18,8 +18,8 @@ const Header = ({ username }) => {
         }}
       >
         <h1>
-          Hey {username} <br />
-          Start your journey by one click, <br />
+          Hey {username.split(' ')[0]}, <br />
+          Start your journey with one click, <br />
           explore beautiful world!
         </h1>
         <p>
