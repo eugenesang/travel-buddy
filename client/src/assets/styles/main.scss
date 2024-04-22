@@ -1,6 +1,6 @@
 /* styles.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,400;0,500;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parisienne&display=swap');
 
 @import "./variable.scss";
 
@@ -17,16 +17,16 @@
 }
 
 body {
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Fredoka", sans-serif;
     font-size: 1rem;
     line-height: 1.5;
 
-    background: rgb(218, 255, 251);
+    background: rgb(223, 252, 239);
     background: linear-gradient(
         90deg,
         rgba(218, 255, 251, 1) 0%,
-        rgba(22, 216, 255, 0.3971561891358105) 35%,
-        rgba(0, 212, 255, 0.38875282779127274) 100%
+        rgba(22, 255, 158, 0.397) 35%,
+        rgba(0, 255, 110, 0.389) 100%
     );
 }
 
@@ -37,6 +37,12 @@ a {
 
 a:hover {
     text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 ul {
@@ -269,3 +275,36 @@ legend {
 }
 
 /* Add more custom styles as needed */
+
+
+.login-container{
+  max-width: 400px;
+  margin: 10px auto;
+  justify-content: start;
+
+  .top-section{
+    form{
+      gap: 20px;
+      padding-top: 12px;
+
+      .form-elements{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      @media (max-width: 768px){
+        &{
+          width: 90vw;
+        }
+      }
+    }
+
+
+
+  }
+
+  .foot-section{
+    margin-top: 4rem;
+  }
+}
