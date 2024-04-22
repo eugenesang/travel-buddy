@@ -44,7 +44,7 @@ const Navigation = () => {
           }}
         />
         <h1>
-          Travel <span>Buddy</span>
+          Travel <span>Connect</span>
         </h1>
       </Link>
       <div className="row">
