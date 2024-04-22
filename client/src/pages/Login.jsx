@@ -37,36 +37,46 @@ const Login = () => {
   };
 
   return (
-    <div className="container" style={{ padding: "5rem" }}>
-      <h1>Login</h1>
+    <div className="container login-container" style={{ padding: "5rem" }}>
+      <div className="top-section">
 
-      {isLoading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
+        {isLoading && <p>Loading...</p>}
+        {error && <p>Error: {error}</p>}
 
-      <form onSubmit={handleLogin}>
-        <input
-          type="text"
-          placeholder="Enter your email"
-          name="email"
-          value={formData.email}
-          onChange={handleInput}
-        />
+        <form onSubmit={handleLogin}>
+          <fieldset>
+            <legend><h1>Login</h1></legend>
+            <div className="form-elements">
+              <input
+                type="text"
+                placeholder="Enter your email"
+                name="email"
+                value={formData.email}
+                onChange={handleInput}
+              />
 
-        <input
-          type="password"
-          placeholder="Enter your password"
-          name="password"
-          value={formData.password}
-          onChange={handleInput}
-        />
+              <input
+                type="password"
+                placeholder="Enter your password"
+                name="password"
+                value={formData.password}
+                onChange={handleInput}
+              />
 
-        <button type="submit" disabled={isLoading}>
-          {isLoading ? "Logging in..." : "Login"}
-        </button>
-      </form>
-      <Link to={"/signup"}>
-        <span>or</span> Signup
-      </Link>
+              <button type="submit" disabled={isLoading}>
+                {isLoading ? "Logging in..." : "Login"}
+              </button>
+            </div>
+          </fieldset>
+
+        </form>
+      </div>
+      <div className="foot-section">
+        <span>Don&rsquo;t have an account? </span>
+        <Link to={"/signup"}>
+          Signup
+        </Link>
+      </div>
     </div>
   );
 };
