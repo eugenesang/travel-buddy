@@ -1,4 +1,4 @@
-import logos_black from "./../assets/images/logos_black.png";
+import logos_black from "./../assets/images/logo.png";
 import illustration from "./../assets/images/illustration.svg";
 import chooseus from "./../assets/images/chooseus.svg";
 
