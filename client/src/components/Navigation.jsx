@@ -26,7 +26,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="navigation glass-effect">
+    <nav className="navigation">
       <Link
         to={"/"}
         style={{
