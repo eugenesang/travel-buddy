@@ -20,6 +20,11 @@ import {
 
 import { getTripById, deleteTrip } from "../services/tripApi";
 
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
 const TripDetails = () => {
   const [trip, setTrip] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -30,6 +35,8 @@ const TripDetails = () => {
   const { user } = useSelector((state) => state.user);
   const { id } = useParams();
   const navigate = useNavigate();
+
+  console.log(user);
 
   useEffect(() => {
     const fetchTripDetails = async () => {
@@ -91,9 +98,10 @@ const TripDetails = () => {
 
   return (
     <div>
-      {isLoading ? (
+      {isLoading && (
         <div className="container">Loading...</div>
-      ) : (
+      ) } 
+      {trip?._id && (
         <div className="row" style={{ justifyContent: "space-between" }}>
           {/* Left part */}
           <div
@@ -132,15 +140,15 @@ const TripDetails = () => {
                   }}
                 >
                   {[
-                    { label: "Start Date", value: trip?.startDate },
-                    { label: "End Date", value: trip?.endDate },
-                    { label: "Created By", value: trip?.createdBy },
+                    { label: "Start Date", value: formatDate(trip?.startDate) },
+                    { label: "End Date", value: formatDate(trip?.endDate) },
+                    { label: "Created By", value: user.name },
                     {
                       label: "Invited friends",
-                      value: "No of friends invited",
+                      value: trip?.invitations?.length || 0,
                     },
                     { label: "Total days", value: `${trip?.totalDays} Days` },
-                    { label: "Cost for each", value: trip?.cost },
+                    { label: "Cost for each", value: `Ksh. ${trip?.cost}` },
                   ].map(({ label, value }) => (
                     <div
                       className="glass-effect"
@@ -220,8 +228,9 @@ const TripDetails = () => {
               <h1>Trip Duration</h1>
               <div>
                 <CalendarComponent
-                  startDate={trip.startDate}
-                  endDate={trip.endDate}
+                  startDate={new Date(trip.startDate)}
+                  endDate={new Date(trip.endDate)}
+                  
                 />
               </div>
             </div>
