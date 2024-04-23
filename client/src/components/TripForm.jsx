@@ -22,6 +22,7 @@ const TripForm = () => {
   });
 
   const [invitationEmails, setInvitationEmails] = useState([""]);
+  const [currentEmail, setCurrentEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e) => {
@@ -31,11 +32,11 @@ const TripForm = () => {
     });
   };
 
-  const handleInvitationChange = (index, value) => {
-    const updatedEmails = [...invitationEmails];
-    updatedEmails[index] = value;
-    setInvitationEmails(updatedEmails);
-  };
+  const addEmail = (email)=>{
+    const emails = new Set([...invitationEmails, email]);
+
+    setInvitationEmails([...emails]);
+  }
 
   const handleAddMore = () => {
     setInvitationEmails([...invitationEmails, ""]);
@@ -62,7 +63,7 @@ const TripForm = () => {
 
     setIsLoading(false);
 
-    navigate("/");
+    navigate("/trips");
 
     // Clear form fields after submitting
     setTripData({
@@ -79,7 +80,7 @@ const TripForm = () => {
     setInvitationEmails([""]);
   };
 
-  console.log("TripForm.jsx: tripData", tripData);
+ // console.trace(tripData);
 
   return (
     <form
@@ -229,7 +230,29 @@ const TripForm = () => {
               width: "100%",
             }}
           >
-            {invitationEmails.map((email, index) => (
+            <div className="row">
+            <input
+                  type="email"
+                  placeholder={`Enter email address ${1 + invitationEmails.length}`}
+                  value={currentEmail}
+                  onChange={(e) =>
+                    setCurrentEmail(e.target.value)
+                  }
+                  required
+                />
+                <button
+                  type="button"
+                  className="remove-email-button"
+                  onClick={() => {
+                    addEmail(currentEmail);
+                    console.log(invitationEmails);
+                    setCurrentEmail("");
+                  }}
+                >
+                  ADD
+                </button>
+            </div>
+            {invitationEmails.filter(d=>d).map((email, index) => (
               <div
                 key={email}
                 className="row"
@@ -237,24 +260,7 @@ const TripForm = () => {
                   width: "100%",
                 }}
               >
-                <input
-                  type="email"
-                  id={`invitationEmail${index}`}
-                  name={`invitationEmail${index}`}
-                  placeholder={`Enter email address ${index + 1}`}
-                  value={email}
-                  onChange={(e) =>
-                    handleInvitationChange(index, e.target.value)
-                  }
-                  required
-                />
-                <button
-                  type="button"
-                  className="remove-email-button"
-                  onClick={() => handleRemoveEmail(index)}
-                >
-                  Remove
-                </button>
+                <span>{email}</span> <button type="button" onClick={()=>handleRemoveEmail(index)}><i className="fas fa-xmark"></i></button>
               </div>
             ))}
           </div>
