@@ -36,7 +36,6 @@ const Home = () => {
         style={{
           width: "100%",
           minHeight: "100vh",
-          backgroundColor: "#dafffb",
 
           padding: "5rem 2rem",
 
@@ -46,6 +45,7 @@ const Home = () => {
           justifyContent: "center",
           gap: "2rem",
         }}
+        className="bg-2"
       >
         <div
           style={{
@@ -166,10 +166,9 @@ const Home = () => {
 
       {/* World map */}
       <div
-        className="container"
+        className="container bg-2"
         style={{
           padding: "5rem 2rem",
-          backgroundColor: "#fff",
         }}
       >
         <img src={images.world} alt="map" />
