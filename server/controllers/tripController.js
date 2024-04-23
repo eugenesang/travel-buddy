@@ -1,5 +1,6 @@
 // tripController.js
 
+import { error } from 'console';
 import Trip from '../models/Trip.js';
 import User from '../models/User.js';
 
@@ -36,11 +37,15 @@ export async function createTrip(req, res) {
 // Get all trips of a user
 export async function getUserTrips(req, res) {
     try {
-        const user = await User.findById(req.params.id).populate('trips');
-        if (!user) {
-            return res.status(404).json({ error: 'User not found' });
-        }
-        res.json({ trips: user.trips });
+        const userId = req.params.id;
+        // check if user exists
+        const userExists = await User.findById(userId);
+        if (!userExists) {
+            return res.status(404).json({error: 'User not found' });
+        } 
+
+        const trips = await Trip.find({createdBy: userId});
+        res.json({trips, user: userExists})
     } catch (error) {
         res.status(500).json({ error: 'Failed to get user trips' });
     }
