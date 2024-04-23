@@ -24,7 +24,7 @@ const CalendarComponent = ({ startDate, endDate }) => {
 
   return (
     <div>
-      <Calendar value={startDate || endDate} onChange={handleDateChange} />
+      <Calendar value={startDate || endDate} onChange={handleDateChange} className={"calender"} />
     </div>
   );
 };
