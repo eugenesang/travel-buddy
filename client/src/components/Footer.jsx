@@ -20,7 +20,7 @@ const Footer = () => {
             }}
           >
             <h2>
-              Travel <span>Buddy</span>{" "}
+              Travel <span>Connect</span>{" "}
             </h2>
             <p>
               We are a passionate team of travel enthusiasts dedicated to
