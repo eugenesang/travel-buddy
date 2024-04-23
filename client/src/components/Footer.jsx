@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="footer glass-effect">
+    <footer className="footer ">
       <div className="footer-container">
         <div
           className="row"
@@ -100,11 +100,15 @@ const Footer = () => {
                 gap: "0.5rem",
               }}
             >
-              <p>1234 TripPlanner, New Delhi, India</p>
+              <p>1234 Travel Connect, Nairobi, Kenya</p>
 
-              <p>info@tripplanner.com</p>
+              <p>
+                <a href="mailto:info@travelconnect.com">info@travelconnect.com</a>
+              </p>
 
-              <p>+91 8009396321</p>
+              <p>
+                <a href="tel:+254747195889">+254 747 195 889</a>
+              </p>
             </div>
           </div>
         </div>
