@@ -19,8 +19,8 @@ const Header = ({ username }) => {
       >
         <h1>
           Hey {username.split(' ')[0]}, <br />
-          Start your journey with one click, <br />
-          explore beautiful world!
+          Let's turn all your travel dreams into reality, <br />
+          Explore magical Kenya!
         </h1>
         <p>
           Plan and book your perfect trip with expert advice, travel tips,
