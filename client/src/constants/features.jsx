@@ -16,7 +16,7 @@ const features = [
   {
     id: 1,
     title: "Explore Destinations",
-    description: "Discover amazing travel destinations around the world.",
+    description: "Discover amazing travel destinations around Kenya.",
     icon: (
       <div style={iconStyles}>
         <FaMap />
