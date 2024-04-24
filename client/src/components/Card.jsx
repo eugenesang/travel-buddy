@@ -1,45 +1,28 @@
 import PropTypes from "prop-types";
-import { FiMapPin } from "react-icons/fi";
 
 const Card = ({ trip }) => {
   const { name, destination, tripDays, cost, image, location, totalDays } =
     trip;
-  return (
-    <div
-      style={{
-        padding: "20px",
-        backgroundColor: "#ffffff",
-        borderRadius: "10px",
-        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-      }}
-    >
-      <img
-        style={{
-          maxHeight: "250px",
-          width: "100%",
+  const imgUrl = image
+    ? image
+    : `https://source.unsplash.com/random/800x600?tourist place of${location || destination
+    }`;
 
-          borderRadius: "10px",
-          marginBottom: "10px",
-        }}
-        src={
-          image
-            ? image
-            : `https://source.unsplash.com/random/800x600?tourist place of${
-                location || destination
-              }`
-        }
-        alt={name}
-      />
-      <div
-        style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
-      >
-        <FiMapPin style={{ fontSize: "18px", marginRight: "5px" }} />
-        <span>{destination || location}</span>
+  return (
+    <div className="home-trip-card">
+      <div className="img-container">
+        <img src={imgUrl} alt={name} />
       </div>
-      <h2 style={{ fontWeight: "bold", marginBottom: "5px" }}>{name}</h2>
-      <p style={{ color: "#888888" }}>
-        {tripDays || totalDays} days | $ {cost}
-      </p>
+      <div className="content-container">
+        <div className="location">
+          <i className="fas fa-location-dot"></i>
+          <span className="destination-name">{destination || location}</span>
+        </div>
+        <h2 >{name}</h2>
+        <p>
+          {tripDays || totalDays} days | Ksh {cost}
+        </p>
+      </div>
     </div>
   );
 };
