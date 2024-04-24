@@ -22,7 +22,6 @@ body {
   line-height: 1.5;
 
   background: rgb(0, 108, 59);
-  
 }
 
 a {
@@ -78,7 +77,7 @@ button,
   background-color: white;
   border: 1px solid white;
 
-  i{
+  i {
     color: $bg-color;
   }
 
@@ -86,11 +85,10 @@ button,
     color: white;
     background-color: transparent;
 
-    i{
+    i {
       color: white;
     }
   }
-
 }
 
 form {
@@ -253,11 +251,11 @@ legend {
   gap: 0.5rem;
 }
 
-.bg-1{
+.bg-1 {
   background-color: $bg-color;
 }
 
-.bg-2{
+.bg-2 {
   background-color: $bg-color2;
 }
 
@@ -268,13 +266,13 @@ legend {
   color: black;
   border: 1px solid rgba(209, 213, 219, 0.3);
 
-  *{
+  * {
     color: black;
   }
 }
 
-.calender{
-  *{
+.calender {
+  * {
     color: black;
   }
 }
@@ -333,6 +331,54 @@ legend {
   }
 }
 
+.home-trip-card {
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  .img-container{
+    aspect-ratio: 16/9;
+    padding: 0;
+    margin: 0;
+
+    img{
+      height: 100%;
+      width: 100%;
+      border-radius: 4px;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  .content-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .location{
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4px;
+      align-items: center;
+    }
+
+    i, span.destination-name{
+      color: rgb(0, 22, 100);
+    }
+
+  }
+  h2{
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #444;
+  }
+
+  p{
+    color: #888;
+  }
+}
+
 .trip-card {
   max-width: 90vw;
   width: 250px;
@@ -383,7 +429,7 @@ legend {
     justify-content: space-around;
     align-items: center;
 
-    a{
+    a {
       min-width: 70%;
       padding: 4px 8px;
       font-weight: 500;
