@@ -61,7 +61,7 @@ const Home = () => {
             }}
           >
             <h1>Popular Destinations</h1>
-            <p>Vacations to make your experience enjoyable in world</p>
+            <p>Vacations to make your experience enjoyable in Kenya</p>
           </div>
           <div className="row">
             <input

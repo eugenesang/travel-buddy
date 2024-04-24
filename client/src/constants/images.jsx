@@ -1,6 +1,6 @@
 import logos_black from "./../assets/images/logo.png";
 import illustration from "./../assets/images/illustration.svg";
-import chooseus from "./../assets/images/chooseus.svg";
+import chooseus from "./../assets/images/chooseus.jpg";
 
 //features
 import feature1 from "./../assets/images/feature1.svg";
