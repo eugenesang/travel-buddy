@@ -4,6 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 import { createTrip } from "../services/tripApi";
 
+function isEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
 const TripForm = () => {
   const userData = useSelector((state) => state.user);
   const { user } = userData;
@@ -21,6 +26,8 @@ const TripForm = () => {
     invitations: [],
   });
 
+  const [emailMessage, setEmailMessage] = useState(null);
+
   const [invitationEmails, setInvitationEmails] = useState([""]);
   const [currentEmail, setCurrentEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -33,6 +40,14 @@ const TripForm = () => {
   };
 
   const addEmail = (email)=>{
+    const isValid = isEmail(email);
+
+    if(!isValid){
+      setEmailMessage("Invalid email");
+      return;
+    }else{
+      setEmailMessage("Add more emails")
+    }
     const emails = new Set([...invitationEmails, email]);
 
     setInvitationEmails([...emails]);
@@ -88,6 +103,7 @@ const TripForm = () => {
       style={{
         width: "70%",
         gap: "1rem",
+        maxWidth: "500px"
       }}
     >
       <div
@@ -189,7 +205,9 @@ const TripForm = () => {
           value={tripData.cost}
           onChange={handleInputChange}
           required
-          placeholder="Enter in dollar currency..."
+          placeholder="Enter cost estimate in Ksh."
+          step={100}
+          min={100}
         />
       </div>
 
@@ -228,17 +246,18 @@ const TripForm = () => {
             className="inner-container"
             style={{
               width: "100%",
+              justifyContent: "flex-start",
+              alignItems: "flex-start"
             }}
           >
-            <div className="row">
+            <div className="row" style={{justifyContent: "flex-start"}}>
             <input
                   type="email"
-                  placeholder={`Enter email address ${1 + invitationEmails.length}`}
+                  placeholder={`Add email address`}
                   value={currentEmail}
                   onChange={(e) =>
                     setCurrentEmail(e.target.value)
                   }
-                  required
                 />
                 <button
                   type="button"
@@ -252,8 +271,10 @@ const TripForm = () => {
                   ADD
                 </button>
             </div>
-            {invitationEmails.filter(d=>d).map((email, index) => (
-              <div
+            <p>{emailMessage && emailMessage}</p>
+            {invitationEmails.map((email, index) =>(
+              <>
+              {email && (<div
                 key={email}
                 className="row"
                 style={{
@@ -261,7 +282,8 @@ const TripForm = () => {
                 }}
               >
                 <span>{email}</span> <button type="button" onClick={()=>handleRemoveEmail(index)}><i className="fas fa-xmark"></i></button>
-              </div>
+              </div>)}
+              </>
             ))}
           </div>
         </div>
@@ -271,7 +293,6 @@ const TripForm = () => {
             cursor: "pointer",
           }}
         >
-          Add more emails...
         </p>
       </div>
 
