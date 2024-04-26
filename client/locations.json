@@ -1,0 +1,251 @@
+[
+    {
+        "name": "Mombasa",
+        "countyCode": 1,
+        "destinations": [
+            "Haller Park",
+            "Bamburi Beach",
+            "World Waters",
+            "Fort Jesus",
+            "Old town"
+        ]
+    },
+    {
+        "name": "Kwale",
+        "countyCode": 2,
+        "destinations": []
+    },
+    {
+        "name": "Kilifi",
+        "countyCode": 3,
+        "destinations": []
+    },
+    {
+        "name": "Tana River",
+        "countyCode": 4,
+        "destinations": []
+    },
+    {
+        "name": "Lamu",
+        "countyCode": 5,
+        "destinations": []
+    },
+    {
+        "name": "Taita Taveta",
+        "countyCode": 6,
+        "destinations": []
+    },
+    {
+        "name": "Garissa",
+        "countyCode": 7,
+        "destinations": []
+    },
+    {
+        "name": "Wajir",
+        "countyCode": 8,
+        "destinations": []
+    },
+    {
+        "name": "Mandera",
+        "countyCode": 9,
+        "destinations": []
+    },
+    {
+        "name": "Marsabit",
+        "countyCode": 10,
+        "destinations": []
+    },
+    {
+        "name": "Isiolo",
+        "countyCode": 11,
+        "destinations": []
+    },
+    {
+        "name": "Meru",
+        "countyCode": 12,
+        "destinations": []
+    },
+    {
+        "name": "Tharaka Nithi",
+        "countyCode": 13,
+        "destinations": []
+    },
+    {
+        "name": "Embu",
+        "countyCode": 14,
+        "destinations": []
+    },
+    {
+        "name": "Kitui",
+        "countyCode": 15,
+        "destinations": []
+    },
+    {
+        "name": "Machakos",
+        "countyCode": 16,
+        "destinations": []
+    },
+    {
+        "name": "Makueni",
+        "countyCode": 17,
+        "destinations": []
+    },
+    {
+        "name": "Nyandarua",
+        "countyCode": 18,
+        "destinations": []
+    },
+    {
+        "name": "Nyeri",
+        "countyCode": 19,
+        "destinations": []
+    },
+    {
+        "name": "Kirinyaga",
+        "countyCode": 20,
+        "destinations": []
+    },
+    {
+        "name": "Murang'a",
+        "countyCode": 21,
+        "destinations": []
+    },
+    {
+        "name": "Kiambu",
+        "countyCode": 22,
+        "destinations": []
+    },
+    {
+        "name": "Turkana",
+        "countyCode": 23,
+        "destinations": []
+    },
+    {
+        "name": "West Poket",
+        "countyCode": 24,
+        "destinations": []
+    },
+    {
+        "name": "Samburu",
+        "countyCode": 25,
+        "destinations": []
+    },
+    {
+        "name": "Trans Nzoia",
+        "countyCode": 26,
+        "destinations": []
+    },
+    {
+        "name": "Uasin Gishu",
+        "countyCode": 27,
+        "destinations": []
+    },
+    {
+        "name": "Elgeyo Marakwet",
+        "countyCode": 28,
+        "destinations": [
+            "Iten View Point",
+            "Lake Kapnarok"
+        ]
+    },
+    {
+        "name": "Nandi",
+        "countyCode": 29,
+        "destinations": []
+    },
+    {
+        "name": "Baringo",
+        "countyCode": 30,
+        "destinations": []
+    },
+    {
+        "name": "Laikipia",
+        "countyCode": 31,
+        "destinations": []
+    },
+    {
+        "name": "Nakuru",
+        "countyCode": 32,
+        "destinations": []
+    },
+    {
+        "name": "Narok",
+        "countyCode": 33,
+        "destinations": []
+    },
+    {
+        "name": "Kajiado",
+        "countyCode": 34,
+        "destinations": []
+    },
+    {
+        "name": "Kericho",
+        "countyCode": 35,
+        "destinations": []
+    },
+    {
+        "name": "Bomet",
+        "countyCode": 36,
+        "destinations": []
+    },
+    {
+        "name": "Kakamega",
+        "countyCode": 37,
+        "destinations": []
+    },
+    {
+        "name": "Vihiga",
+        "countyCode": 38,
+        "destinations": []
+    },
+    {
+        "name": "Bungoma",
+        "countyCode": 39,
+        "destinations": []
+    },
+    {
+        "name": "Busia",
+        "countyCode": 40,
+        "destinations": []
+    },
+    {
+        "name": "Siaya",
+        "countyCode": 41,
+        "destinations": []
+    },
+    {
+        "name": "Kisumu",
+        "countyCode": 42,
+        "destinations": []
+    },
+    {
+        "name": "Homa Bay",
+        "countyCode": 43,
+        "destinations": []
+    },
+    {
+        "name": "Migori",
+        "countyCode": 44,
+        "destinations": []
+    },
+    {
+        "name": "Kisii",
+        "countyCode": 45,
+        "destinations": []
+    },
+    {
+        "name": "Nyamira",
+        "countyCode": 46,
+        "destinations": []
+    },
+    {
+        "name": "Nairobi",
+        "countyCode": 47,
+        "destinations": [
+            "National Museum",
+            "Uhuru Gardens",
+            "Nairobi National Park",
+            "Giraffe Centre"
+        ]
+    }
+]
