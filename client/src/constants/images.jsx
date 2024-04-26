@@ -8,6 +8,7 @@ import feature2 from "./../assets/images/feature2.svg";
 import feature3 from "./../assets/images/feature3.svg";
 
 import world from "./../assets/images/world.svg";
+import kenyaTour from "./../assets/images/kenya-tour.png"
 
 export default {
   logos_black,
@@ -17,4 +18,5 @@ export default {
   feature2,
   feature3,
   world,
+  kenyaTour
 };
