@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 const TouristLocationCard = ({
   image,
   description,
-  location,
   name,
-  numHotels,
+  excerpt
 }) => {
   return (
     <div
@@ -30,19 +29,17 @@ const TouristLocationCard = ({
         }}
       />
       <div style={{ marginTop: "10px", marginBottom: "10px" }}>
-        <p style={{ fontSize: "16px", fontWeight: "bold" }}>{name}</p>
-        <p style={{ fontSize: "14px", color: "#666" }}>{description}</p>
+        <p style={{ fontSize: "16px", fontWeight: "bold", color: "#222" }}>
+          {name}
+        </p>
+        <p style={{ fontSize: "14px", color: "#66a", fontStyle: "italic" }}>{description}</p>
       </div>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <img
-          src="location-icon.png"
-          alt="Location"
-          style={{ width: "20px", marginRight: "5px" }}
-        />
-        <p style={{ fontSize: "14px", color: "#333" }}>{location}</p>
+        
+        
       </div>
       <div style={{ marginTop: "10px", fontSize: "14px", color: "#666" }}>
-        {numHotels} Hotels Available
+        <p dangerouslySetInnerHTML={{ __html: excerpt }} style={{color: '#666'}}></p>
       </div>
     </div>
   );
@@ -54,6 +51,7 @@ TouristLocationCard.propTypes = {
   location: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   numHotels: PropTypes.number.isRequired,
+  excerpt: PropTypes.string
 };
 
 export default TouristLocationCard;
