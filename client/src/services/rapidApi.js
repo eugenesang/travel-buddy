@@ -35,22 +35,19 @@ export const travelData = async (location) => {
 export const fetchTouristPlaces = async (location) => {
     const options = {
         method: "GET",
-        url: "https://booking-com.p.rapidapi.com/v1/hotels/locations",
+        url: "https://api.wikimedia.org/core/v1/wikipedia/en/search/page",
         params: {
-            name: location,
-            locale: "en-gb",
-        },
-        headers: {
-            "X-RapidAPI-Key":
-                rapidApiKey,
-            "X-RapidAPI-Host": "booking-com.p.rapidapi.com",
-        },
+            q: `Kenya ${location}`,
+            language: 'en',
+            limit: 16
+        }
     };
 
     // Fetch tourist places
     try {
         const response = await axios.request(options);
-        return response.data; // Return tourist places
+        const locations = response.data?.pages;
+        return locations.filter((({thumbnail})=>thumbnail?.url)); // Return tourist places
     } catch (error) {
         console.error("Error fetching tourist places:", error);
     }
