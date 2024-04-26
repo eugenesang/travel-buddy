@@ -2,9 +2,20 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { images } from "../constants";
+import { useState } from "react";
 
 const Navigation = () => {
   const user = useSelector((state) => state.user.user);
+
+  const [navOpen, setNavOpen] = useState(false);
+
+  const openCloseNav = ()=>{
+    setNavOpen(!navOpen);
+  }
+
+  const closeNav = ()=>{
+    setNavOpen(false);
+  }
 
   const mainMenu = [
     {
@@ -27,48 +38,43 @@ const Navigation = () => {
 
   return (
     <nav className="navigation">
-      <Link
-        to={"/"}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "0.5rem",
-        }}
-      >
-        <img
-          src={images.logos_black}
-          alt="logo"
-          style={{
-            width: "4rem",
-            height: "4rem",
-          }}
-        />
-        <h1>
-          Travel <span>Connect</span>
-        </h1>
-      </Link>
-      <div className="row">
-        {mainMenu.map((item, index) => (
-          <Link key={index} to={item.link}>
-            {item.label}
-          </Link>
-        ))}
+      <div className="brand-info">
+        <Link>
+          <img src={images.logos_black} />
+          <h1>Travel <span>Connect</span></h1>
+        </Link>
       </div>
-      {user ? (
-        <div className="row">
-          <Link to="/create-trip">Create Trip</Link>
-          <Link to="/profile" className="button">
-            Profile
-          </Link>
+      <div className="open-close pc-hidden" onClick={openCloseNav}>
+          {!navOpen && <i className="fas fa-bars"/>}
+          {navOpen && <i className="fas fa-xmark"/>}
         </div>
-      ) : (
-        <div className="row">
-          <Link to="/login">Login</Link>
-          <Link to="/signup" className="button">
-            Register
-          </Link>
+      <div className={`row nav-options ${navOpen && "nav-open"}`}>
+        
+        <div className="row menu-list">
+          {mainMenu.map((item, index) => (
+            <Link key={index} to={item.link} onClick={closeNav}>
+              {item.label}
+            </Link>
+          ))}
         </div>
-      )}
+        {user ? (
+          <div className="row">
+            <Link to="/create-trip" onClick={closeNav} title="Create trip" className="button" style={{borderRadius: "50%", width: "32px", height: "32px", padding: "0px"}} onClick={closeNav}>
+              <i className="fas fa-plus"></i>
+            </Link>
+            <Link to="/profile" className="button" style={{borderRadius: "50%", width: "32px", height: "32px", padding: "0px"}} onClick={closeNav}>
+              <i className="fas fa-user"></i>
+            </Link>
+          </div>
+        ) : (
+          <div className="row">
+            <Link to="/login" onClick={closeNav}>Login</Link>
+            <Link to="/signup" className="button" onClick={closeNav}>
+              Register
+            </Link>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
