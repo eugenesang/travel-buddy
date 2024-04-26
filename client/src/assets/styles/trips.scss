@@ -1,0 +1,25 @@
+.trips-container{
+    width: 100%;
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    .btn-container{
+        padding-top: 16px;
+
+        .button{
+            background-color: $bg-color2;
+            color: white;
+            border-color: $bg-color2;
+            text-transform: uppercase;
+            max-width: 80%;
+            margin: 0px auto;
+    
+            &:hover{
+                background-color: transparent;
+                color: $bg-color2;
+            }
+        }
+    }
+}
