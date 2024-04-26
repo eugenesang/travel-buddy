@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parisienne&display=swap");
 
 @import "./variable.scss";
+@import "./nav.scss";
+@import "./trips.scss";
 
 /* Your custom styles below */
 
@@ -14,6 +16,18 @@
   box-sizing: border-box;
 
   color: white;
+}
+
+@media (max-width: 768px){
+  .mb-hidden{
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px){
+  .pc-hidden{
+    display: none !important;
+  }
 }
 
 body {
@@ -277,18 +291,7 @@ legend {
   }
 }
 
-.navigation {
-  width: 100%;
-  height: 100%;
-  background-color: $bg-color2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  padding: 0 2rem;
-
-  color: $white-color;
-}
 
 .row {
   display: flex;
