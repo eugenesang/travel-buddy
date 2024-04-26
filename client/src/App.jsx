@@ -39,6 +39,10 @@ const App = () => {
   return (
     <div>
       <Navigation />
+      <div className="nav-gap" style={{
+        height: "75px",
+        width: "100%"
+      }}></div>
       <Routes>
         <Route path="/" element={<Home />} />
 
