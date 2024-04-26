@@ -9,6 +9,14 @@ const tripReviewSchema = new mongoose.Schema({
     trip: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Trip"
+    },
+    rating: {
+        type: Number,
+        min: 0,
+        max: 5
+    },
+    comment: {
+        type: String
     }
 }, {
     timestamps: true
