@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import {
   CalendarComponent,
   TouristLocationCard,
-  HotelCard,
   ImageCarousel,
   InviteFriend,
 } from "../components";
@@ -15,10 +14,22 @@ import { fetchImages } from "../services/unsplashApi";
 import {
   fetchPlaceLocation,
   fetchTouristPlaces,
-  fetchHotels,
 } from "../services/rapidApi";
 
 import { getTripById, deleteTrip } from "../services/tripApi";
+
+function editUrl(img){
+  const pieces = img.split("/");
+
+  let imgData = pieces.pop();
+
+  let [a, b] = imgData.split('px');
+
+  a=300;
+
+  imgData = [a,b].join('px');
+  return [...pieces, imgData].join("/");
+}
 
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -29,14 +40,22 @@ const TripDetails = () => {
   const [trip, setTrip] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [images, setImages] = useState([]);
-  const [touristPlaces, setTouristPlaces] = useState([]);
-  const [hotels, setHotels] = useState([]);
+  const [touristPlaces, setTouristPlaces] = useState(null);
 
   const { user } = useSelector((state) => state.user);
   const { id } = useParams();
   const navigate = useNavigate();
 
   console.log(user);
+
+  useEffect(()=>{
+    (async ()=>{
+      const fetchedTouristPlaces = await fetchTouristPlaces(trip.destination);
+
+      setTouristPlaces(fetchedTouristPlaces);
+      console.log(fetchedTouristPlaces);
+    })()
+  }, [trip])
 
   useEffect(() => {
     const fetchTripDetails = async () => {
@@ -46,7 +65,7 @@ const TripDetails = () => {
         const trip = await getTripById(id);
         setTrip(trip);
 
-        const [fetchedImages, fetchedTouristPlaces, placeProperty] =
+        const [fetchedImages, fetchedTouristPlaces] =
           await Promise.all([
             fetchImages(trip.destination),
             fetchTouristPlaces(trip.destination),
@@ -56,13 +75,9 @@ const TripDetails = () => {
         setImages(fetchedImages);
         setTouristPlaces(fetchedTouristPlaces);
 
-        if (placeProperty && placeProperty.lat && placeProperty.lon) {
-          const fetchedHotels = await fetchHotels(
-            placeProperty.lat,
-            placeProperty.lon
-          );
-          setHotels(fetchedHotels);
-        }
+        
+
+        
       } catch (error) {
         console.error("Error fetching trip details:", error);
       } finally {
@@ -175,7 +190,7 @@ const TripDetails = () => {
               className="inner-container"
               style={{ alignItems: "flex-start", width: "100%" }}
             >
-              <h1>Tourist Places</h1>
+              <h1>Recommendations</h1>
               <div
                 style={{
                   display: "grid",
@@ -184,16 +199,19 @@ const TripDetails = () => {
                   width: "100%",
                 }}
               >
-                {touristPlaces?.slice(0, 3).map((location) => (
-                  <TouristLocationCard
-                    key={location?.dest_id}
-                    image={location?.image_url}
-                    description={location?.label}
-                    location={`${location?.region}, ${location?.country}`}
-                    name={location?.name}
-                    numHotels={location?.nr_hotels}
-                  />
-                ))}
+                {touristPlaces && touristPlaces.map((location) => {
+                  console.log(location);
+                  return (
+                    <TouristLocationCard
+                      key={location?.id}
+                      image={editUrl(location?.thumbnail.url)}
+                      description={location?.description}
+                      excerpt={location?.excerpt}
+                      location={`${trip.destination}, Kenya`}
+                      name={location?.title}
+                    />
+                  )
+                })}
               </div>
             </div>
 
@@ -234,26 +252,6 @@ const TripDetails = () => {
                 />
               </div>
             </div>
-            {hotels?.length > 0 && (
-              <div
-                className="inner-container"
-                style={{ alignItems: "flex-start", gap: "1rem" }}
-              >
-                <h1>Hotels Nearby</h1>
-                {hotels?.slice(0, 4).map((hotel) => (
-                  <HotelCard
-                    key={hotel?.hotel_name}
-                    hotelName={hotel?.hotel_name}
-                    address={hotel?.address}
-                    reviewScore={hotel?.review_score}
-                    price={hotel?.min_total_price}
-                    imageURL={hotel?.max_photo_url}
-                    websiteURL={hotel?.urL}
-                    zip={hotel?.zip}
-                  />
-                ))}
-              </div>
-            )}
           </div>
         </div>
       )}
