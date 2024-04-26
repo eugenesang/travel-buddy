@@ -171,7 +171,7 @@ const Home = () => {
           padding: "5rem 2rem",
         }}
       >
-        <img src={images.world} alt="map" />
+        <img src={images.kenyaTour} alt="Kenya tour" />
       </div>
     </div>
   );
