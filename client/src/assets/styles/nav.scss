@@ -1,0 +1,69 @@
+.navigation {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: $bg-color2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 0 2rem;
+    z-index: 100;
+    color: $white-color;
+
+    .brand-info{
+        a{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            img{
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .open-close{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 14px;
+            right: 10px;
+
+            i{
+                font-size: 28px;
+            }
+        }
+        .nav-options{
+            display: none;
+
+            
+
+            &.nav-open{
+                position: fixed;
+                top: 0;
+                z-index: -1;
+                right: 0px;
+                background-color: $bg-color2;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                height: 100vh;
+                width: 100%;
+                padding-top: 4rem;
+                padding-right: 2rem;
+
+                .menu-list{
+                    display: flex;
+                    align-items: flex-end;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+  }
