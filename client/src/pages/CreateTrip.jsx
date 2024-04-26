@@ -5,11 +5,13 @@ const CreateTrip = () => {
     <div
       className="container"
       style={{
-        padding: "3rem 2rem",
-        gap: "2rem",
+        padding: "3rem 0",
+        gap: "2rem"
       }}
     >
-      <div className="inner-container">
+      <div className="inner-container" style={{
+        textAlign: "center", marginBottom: "16px"
+      }}>
         <h1>Create a New Trip</h1>
         <p>Plan your next adventure with our trip creation tool.</p>
       </div>
