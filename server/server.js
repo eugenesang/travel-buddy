@@ -7,6 +7,7 @@ import connectDB from './config/db.js';
 //Routes
 import userRoutes from './routes/user.routes.js';
 import tripRoutes from './routes/trip.routes.js';
+import destinationRoutes from "./routes/destination.routes.js"
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/users', userRoutes);
 app.use('/api/trips', tripRoutes);
+app.use('/api/destination', destinationRoutes)
 
 // Error handling
 app.use((req, res, next) => {
