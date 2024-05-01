@@ -5,70 +5,235 @@
         "destinations": [
             "Haller Park",
             "Bamburi Beach",
-            "World Waters",
+            "Wild Waters",
             "Fort Jesus",
-            "Old town"
+            "Old town",
+            "Bombolulu Coast Workshop and Cultural Centre",
+            "Nguuni Nature Sanctuary",
+            "Nyali Cinemax",
+            "Mombasa Go-Kart and Adventure Park",
+            "Nyali Beach",
+            "Mamba Village Centre",
+            "Mama Ngina Drive",
+            "Mombasa Marine National Park",
+            "Mombasa Memorial Cathedral",
+            "Mtwapa Creek",
+            "Shelly Beach",
+            "Mombasa Jain Temple",
+            "Tiwi Beach",
+            "Rabai Museum",
+            "Mombasa Butterfly House",
+            "Spice Market",
+            "Mombasa Tusks"
         ]
     },
     {
         "name": "Kwale",
         "countyCode": 2,
-        "destinations": []
+        "destinations": [
+            "Mwaluganje Elephant Sanctuary",
+            "Shimba Hills National Reserve",
+            "kitzanze waterfall",
+            "Chale Island",
+            "Diani Beach",
+            "Shimoni Slave Caves",
+            "Wasini Island",
+            "Kisite Mpunguti",
+            "Kaya Kinodo Sacred Forest",
+            "Colobus Conservation Park",
+            "Sheldrick Falls",
+            ""
+        ]
     },
     {
         "name": "Kilifi",
         "countyCode": 3,
-        "destinations": []
+        "destinations": [
+            "Kilifi Bridge",
+            "Mnarani Ruins",
+            "Takaungu Creek",
+            "Vipingo Ridge",
+            "Watamu Beach",
+            "Arabuko Sokoke National Reserve",
+            "Mtwapa Beach",
+            "Kilifi Creek",
+            "Papa Remo",
+            "Jumba La Mtwana",
+            "Shanzu Beach"
+
+        ]    
     },
     {
         "name": "Tana River",
         "countyCode": 4,
-        "destinations": []
+        "destinations": [
+            "Tana River Primate National Reserve",
+            "Tzavo Safari",
+            "Tana River",
+            "Kora National Park",
+            "George Adamson's Grave",
+            "Tana River Point",
+            "Adamson Falls",
+            "Grand Falls"
+        ]
     },
     {
         "name": "Lamu",
         "countyCode": 5,
-        "destinations": []
+        "destinations": [
+            "Shanga Ruins",
+            "Kiwayu Island",
+            "Manda Island",
+            "Lamu Old Town",
+            "Shela Beach",
+            "Lamu Museum",
+            "Siyu Fort",
+            "German Post Office Museum",
+            "Kipungani Beach",
+            "Takwa Ruins",
+            "Swahili House Museum",
+            "Town Square",
+            "Pate Island",
+            "Kiunga Marine National Reserve",
+            "Shanga Ruins"
+        ]
     },
     {
         "name": "Taita Taveta",
         "countyCode": 6,
-        "destinations": []
+        "destinations": [
+            "Tsavo East National Park",
+            "Tsavo West National Park",
+            "Shetani Lava Flow",
+            "Mzima Springs",
+            "Ngutuni Wildlife Conservancy",
+            "Chaimu Crater Viewpoint",
+            "Grogon Castle",
+            "Lake Jipe",
+            "Lake Chala",
+            "Lumo Community Wildlife Conservancy",
+            "Aruba Dam",
+            "Yatta Platteau",
+            "Lugard Falls"
+        ]
     },
     {
         "name": "Garissa",
         "countyCode": 7,
-        "destinations": []
+        "destinations": [
+            "Kora National Park",
+            "Arawale National Reserve",
+            "Boni National Reserve",
+            "Garissa Community Giraffe Sanctuary",
+            "Garissa Culture and Heritage Center",
+            "Garissa Solar Power Plant"
+        ]
     },
     {
         "name": "Wajir",
         "countyCode": 8,
-        "destinations": []
+        "destinations": [
+            "Wajir Fort",
+            "Wajir Museum",
+            "Wajir Cultural Centre",
+            "Wajir Nature Reserve",
+            "Wajir Camel Market",
+            "Buna Mosque",
+            "Wajir Palace",
+            "Wajir Central Market",
+            "El Wak Border POint",
+            "Habaswein Hills",
+            "Bunaama Rock Art Site"
+        ]
     },
     {
         "name": "Mandera",
         "countyCode": 9,
-        "destinations": []
+        "destinations": [
+            "Malka Mari National Park",
+            "Elo Wak Town",
+            "Takaba Fort",
+            "Golole Wildlife Reserve",
+            "Dandu Village",
+            "Rhamu Sand Dunes",
+            "Qoqol Wells",
+            "Wabero Salt Springs",
+            "Rhamu Museum",
+            "Bula Gubo Town",
+            "Mandera Central Mosque",
+            "Arabia Village",
+            "El Golicha Viewpoint",
+            "Lafey Town",
+            "Bula Mpya"
+        ]
     },
     {
         "name": "Marsabit",
         "countyCode": 10,
-        "destinations": []
+        "destinations": [
+            "Sibiloi National Park",
+            "Marsabit National Reserve and Park",
+            "Koobi Fora Museum",
+            "Mount Marsabit",
+            "Chalbi Desert",
+            "Goff Aretho Crater",
+            "Lake Paradise",
+            "Singing Wells"
+        ]
     },
     {
         "name": "Isiolo",
         "countyCode": 11,
-        "destinations": []
+        "destinations": [
+            "Shaba National Reserve",
+            "Bisanadi Reserve",
+            "Buffalo Springs National Reserve",
+            "Ewaso Nyiro River",
+            "Sleeping Lion Hills",
+            "Dadakima Cliffs",
+            "Magado Crater",
+            "Champagne Ridge",
+            "Ololokwe",
+            "Ngare Mara Swamp",
+            "Gotu Springs",
+            "Chafa Waterfalls"
+        ]
     },
     {
         "name": "Meru",
         "countyCode": 12,
-        "destinations": []
+        "destinations": [
+            "Devil's Bridge Waterfall",
+            "Meru National Park",
+            "Nyambene Hills",
+            "Nyambene National Reserve",
+            "Rhino Sanctuary",
+            "Mt. Kenya National Park",
+            "Ngare Ndare Forest",
+            "Mbili Waterfall",
+            "River Kathita Waterfall",
+            "Kaaga War Memorial",
+            "King Muuru",
+            "Njuri Ncheke Headquarters",
+            "Lewa Wildlife Conservancy",
+            "Kiathanda Hills",
+            "Mpogoro Forest"
+        ]
     },
     {
         "name": "Tharaka Nithi",
         "countyCode": 13,
-        "destinations": []
+        "destinations": [
+            "Kibuuka Grand Falls",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+            
+        ]
     },
     {
         "name": "Embu",
@@ -166,7 +331,14 @@
     {
         "name": "Nakuru",
         "countyCode": 32,
-        "destinations": []
+        "destinations": [
+            "Kigio Wildlife Conservancy",
+            "",
+            "",
+            "",
+            ""
+
+        ]
     },
     {
         "name": "Narok",
