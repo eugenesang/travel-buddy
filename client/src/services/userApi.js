@@ -55,7 +55,7 @@ export const updateUser = {
         } catch (error) {
             throw new Error("Failed to update user's about")
         }
-    }
+    },
 }
 
 
