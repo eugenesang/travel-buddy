@@ -32,7 +32,13 @@ const userSchema = new Schema({
     profilePhoto: {
         type: String,
         default: '/dp/user-profile-icon.jpg'
-    }
+    },
+    likedDestinations: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Destination"
+        }
+    ]
 }, {
     timestamps: true
 });
