@@ -1,0 +1,49 @@
+#explore{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    article.explore-card{
+        position: relative;
+
+        .action-section{
+            position: absolute;
+            top: 16px;
+            right: 16px;
+
+            button{
+                background-color: transparent;
+                padding: 4px;
+                border: none;
+                font-size: 24px;
+
+                i{
+                    &.liked{
+                        color: red;
+                    }
+                    &.not-liked{
+                        color: gray;
+                    }
+                }
+
+                &:hover{
+                    i{
+                        &.liked{
+                            color: crimson;
+                        }
+                        &.not-liked{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .img-container{
+            img{
+                aspect-ratio: 16/9;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+}
