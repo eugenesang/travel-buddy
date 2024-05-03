@@ -36,6 +36,17 @@ export async function getAll(req, res) {
     }
 }
 
+export async function getById(req, res){
+    try {
+        const id = req.params.id;
+        const destination = await Destination.findById(id);
+        res.json(destination);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: "Failed to get destination"})
+    }
+}
+
 export async function createMany(req, res) {
     const destinations = req.body.destinations;
 
@@ -63,47 +74,14 @@ export async function createMany(req, res) {
     }
 }
 
-async function getRandomDestination() {
-    const randomDestination = await Destination.aggregate([
-        { $sample: { size: 1 } } // Retrieve one random document
-    ]); // Selects 1 random document
-    return randomDestination[0]; // Get the first element from the returned array
-}
 
-async function findSimilarLocation(location) {
-    const similarLocations = await Destination.find({ location: { $regex: location, $options: 'i' } })
-        .limit(5);
-    return similarLocations;
-}
-
-async function findSimilarDescription(description) {
-    const keywords = [...new Set(description.split(" "))]; // Split description into keywords
-    const regex = new RegExp(keywords.join('|'), 'gi'); // Case-insensitive search for any keyword
-
-    const similarDescriptions = await Destination.find({ description: { $regex: regex } })
-        .limit(9);
-    return similarDescriptions;
-}
-
-async function findSimilarTitle(title){
-    const keywords = title.split(/\s+/); // Split description into keywords
-    const regex = new RegExp(keywords.join('|'), 'gi'); // Case-insensitive search for any keyword
-
-    const similarTitle = await Destination.find({ description: { $regex: regex } })
-        .limit(9);
-    return similarTitle;
-}
 
 async function recommendDestinations() {
-    const randomDest = await getRandomDestination();
-    const similarLocation = await findSimilarLocation(randomDest.location);
-    const similarDescription = await findSimilarDescription(randomDest.description);
-    const similarTitle = await findSimilarTitle(randomDest.title)
+    const randomDocs = await Destination.aggregate([{
+        $sample: {size: 20}
+    }])
 
-
-    return [
-        randomDest, ...similarDescription, ...similarLocation, ...similarTitle
-    ]
+    return randomDocs;
 }
 
 export async function explore(req, res) {
@@ -126,15 +104,14 @@ export const searchDestinations = async (req, res) => {
         }
 
         // Search destinations based on title or description containing the query string
-        const destinations = await Destination.find({
-            $or: [
-                { title: { $regex: query, $options: 'i' } }, // Case-insensitive regex search for title
-                { description: { $regex: query, $options: 'i' } }, // Case-insensitive regex search for description
-            ]
-        })
-            .limit(20); // Limit to 20 results
+        const destinations = await Destination.find(
+            { $text: { $search: query } },
+            { score: { $meta: 'textScore' } }
+        )
+        .sort({ score: { $meta: 'textScore' } })
+        .limit(20); // Limit to 20 results
 
-        res.status(200).json({ destinations });
+        res.status(200).json(destinations);
     } catch (error) {
         console.error('Error searching destinations:', error);
         res.status(500).json({ message: 'Internal server error' });
@@ -161,7 +138,7 @@ export async function like(req, res){
         await dest.save();
         await account.save();
 
-        res.status(200).json({user: account, destination: dest})
+        res.status(200).json({user: account, destination:dest})
     } catch (error) {
         console.error(error);
         res.status(500).json({error: "Internal server error"})
