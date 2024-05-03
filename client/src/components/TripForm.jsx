@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { createTrip } from "../services/tripApi";
+import { getDestinationById } from "../services/destinationApi";
 
 function isEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -14,6 +15,10 @@ const TripForm = () => {
   const { user } = userData;
 
   const navigate = useNavigate();
+
+  const location = useLocation();
+
+
 
   const [tripData, setTripData] = useState({
     destination: "",
@@ -39,13 +44,37 @@ const TripForm = () => {
     });
   };
 
-  const addEmail = (email)=>{
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const destination = searchParams.get('destination');
+    const fetchDestinations = async () => {
+      try {
+        const response = await getDestinationById(destination);
+
+        setTripData({
+          ...tripData,
+          description: response.description,
+          destination: response.location,
+          name: `Tour to ${response.title}`
+        })
+
+      } catch (error) {
+        console.error('Error fetching destinations:', error);
+      }
+    };
+
+    if (destination) {
+      fetchDestinations();
+    }
+  }, [location.search]);
+
+  const addEmail = (email) => {
     const isValid = isEmail(email);
 
-    if(!isValid){
+    if (!isValid) {
       setEmailMessage("Invalid email");
       return;
-    }else{
+    } else {
       setEmailMessage("Add more emails")
     }
     const emails = new Set([...invitationEmails, email]);
@@ -95,7 +124,7 @@ const TripForm = () => {
     setInvitationEmails([""]);
   };
 
- // console.trace(tripData);
+  // console.trace(tripData);
 
   return (
     <form
@@ -242,7 +271,7 @@ const TripForm = () => {
             width: "100%",
           }}
         >
-          <div
+          <div key={1}
             className="inner-container"
             style={{
               width: "100%",
@@ -250,39 +279,39 @@ const TripForm = () => {
               alignItems: "flex-start"
             }}
           >
-            <div className="row" style={{justifyContent: "flex-start"}}>
-            <input
-                  type="email"
-                  placeholder={`Add email address`}
-                  value={currentEmail}
-                  onChange={(e) =>
-                    setCurrentEmail(e.target.value)
-                  }
-                />
-                <button
-                  type="button"
-                  className="remove-email-button"
-                  onClick={() => {
-                    addEmail(currentEmail);
-                    console.log(invitationEmails);
-                    setCurrentEmail("");
-                  }}
-                >
-                  ADD
-                </button>
-            </div>
-            <p>{emailMessage && emailMessage}</p>
-            {invitationEmails.map((email, index) =>(
-              <>
-              {email && (<div
-                key={email}
-                className="row"
-                style={{
-                  width: "100%",
+            <div className="row" style={{ justifyContent: "flex-start" }}>
+              <input
+                type="email"
+                placeholder={`Add email address`}
+                value={currentEmail}
+                onChange={(e) =>
+                  setCurrentEmail(e.target.value)
+                }
+              />
+              <button
+                type="button"
+                className="remove-email-button"
+                onClick={() => {
+                  addEmail(currentEmail);
+                  console.log(invitationEmails);
+                  setCurrentEmail("");
                 }}
               >
-                <span>{email}</span> <button type="button" onClick={()=>handleRemoveEmail(index)}><i className="fas fa-xmark"></i></button>
-              </div>)}
+                ADD
+              </button>
+            </div>
+            <p>{emailMessage && emailMessage}</p>
+            {invitationEmails.map((email, index) => (
+              <>
+                {email && (<div
+                  key={email}
+                  className="row"
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <span>{email}</span> <button type="button" onClick={() => handleRemoveEmail(index)}><i className="fas fa-xmark"></i></button>
+                </div>)}
               </>
             ))}
           </div>
