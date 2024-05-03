@@ -19,7 +19,10 @@ const invitationSchema = new mongoose.Schema({
     },
     expiry: {
         type: Date
-    }, 
+    },
+    message: {
+        type: String
+    },
     status: {
         type: String,
         enum: ['accepted', 'rejected', 'pending'],
