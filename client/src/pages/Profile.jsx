@@ -52,7 +52,7 @@ const Profile = () => {
     <div className="container" style={{ padding: "2rem" }} >
       <div className="row" style={{ gap: "2rem" }}>
         <img
-          src="https://source.unsplash.com/random/800x600?people-profilepicture"
+          src="https://source.unsplash.com/random/800x600?african-traveller"
           alt="profile pic"
           style={{
             width: "180px",
@@ -103,7 +103,7 @@ const Profile = () => {
           {/* Render content based on active tab */}
           {activeTab === "trips" && (
             <div
-              key={filteredTrips.length}
+              key={filteredTrips}
               style={{
                 width: "100%",
                 display: "grid",
@@ -145,8 +145,8 @@ const Profile = () => {
                   ) : (
                     // Else, render trips
 
-                    filteredTrips.map((trip) => (
-                      <Link key={trip.id} to={`/trips/${trip._id}`}>
+                    filteredTrips.map((trip, i) => (
+                      <Link key={i} to={`/trips/${trip._id}`}>
                         <Card trip={trip} />
                       </Link>
                     ))
