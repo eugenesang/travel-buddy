@@ -20,6 +20,7 @@ import { Navigation, Footer } from "./components";
 
 import { setUser } from "./store/reducers/userSlice";
 import Explore from "./pages/Explore";
+import Search from "./pages/Search";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -57,6 +58,7 @@ const App = () => {
             <Route path="/edit-profile" element={<EditProfile/>} />
             <Route path="/trips" element={<Trip/>} />
             <Route path="/explore" element={<Explore/>}/>
+            <Route path="/search" element={<Search/>}/>
             <Route path="/trips/:id" element={<TripDetails />} />
             <Route path="/trips/:id/edit" element={<UpdateTrip />} />
           </>
