@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose';
+import Invitation from './Invitation.js';
 
 const tripSchema = new Schema({
     name: {
@@ -38,6 +39,21 @@ const tripSchema = new Schema({
         }
     ],
 });
+
+tripSchema.pre('save', function(next){
+    if(this.invitations.length > 0){
+        for(let email of this.invitations){
+            const invitation= new Invitation({
+                sender: this.createdBy,
+                tripId: this._id,
+                recipient: email,
+                message: `invitation to ${this.name}`
+            });
+            invitation.save();
+        }
+    }
+    next();
+})
 
 const Trip = model('Trip', tripSchema);
 
