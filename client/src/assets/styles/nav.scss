@@ -26,6 +26,10 @@
         }
     }
 
+    .nav-options, .brand-info{
+        width: 100%;
+    }
+
     @media screen and (max-width: 768px){
         .open-close{
             width: 40px;
@@ -61,6 +65,10 @@
                     display: flex;
                     align-items: flex-end;
                     flex-direction: column;
+                }
+
+                .account-btn{
+                    margin-bottom: 2rem;
                 }
             }
         }
