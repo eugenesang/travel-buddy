@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const invitationSchema = new mongoose.Schema({
     tripId: {
@@ -10,8 +10,8 @@ const invitationSchema = new mongoose.Schema({
         ref: 'User'
     },
     recipient: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        type: String,
+    
     },
     active: {
         type: Boolean,
@@ -34,4 +34,4 @@ const invitationSchema = new mongoose.Schema({
 
 const Invitation =  mongoose.model("Invitation", invitationSchema);
 
-module.exports = Invitation;
+export default Invitation
