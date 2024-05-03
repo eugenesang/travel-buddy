@@ -15,6 +15,12 @@ const destinationSchema =  new mongoose.Schema({
     }
 });
 
+destinationSchema.index({
+    title: "text",
+    description: "text",
+    location: "text"
+})
+
 const Destination = mongoose.model("Destination", destinationSchema);
 
 export default Destination;
