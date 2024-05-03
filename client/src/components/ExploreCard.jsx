@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import {useSelector, useDispatch} from "react-redux"
 import { setUser } from "../store/reducers/userSlice";
 import {useState} from "react";
+import { Link } from "react-router-dom";
 
 const ExploreCard = ({title, description, location, img, _id}) => {
     
@@ -16,7 +17,7 @@ const ExploreCard = ({title, description, location, img, _id}) => {
     const [isLiked, setIsLiked] = useState(user?.likedDestinations?.includes(_id));
 
     const like = async ()=>{
-        setIsLiked(true);
+        setIsLiked(!isLiked);
         const res = await fetch(`http://localhost:5000/api/destination/like?destination=${_id}&user=${user._id}`);
         const data = await res.json()
         console.log(data.user);
@@ -43,6 +44,9 @@ const ExploreCard = ({title, description, location, img, _id}) => {
                 <p className="title">{title}</p>
                 <p className="desc">{description}</p>
             </div>
+        </div>
+        <div className="link">
+            <Link to={`/create-trip?destination=${_id}`} className="button">Create Trip</Link>
         </div>
     </article> );
 }
