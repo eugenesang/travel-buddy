@@ -190,7 +190,7 @@ const TripDetails = () => {
               className="inner-container"
               style={{ alignItems: "flex-start", width: "100%" }}
             >
-              <h1>Recommendations</h1>
+              <h1>More info from the internet</h1>
               <div
                 style={{
                   display: "grid",
