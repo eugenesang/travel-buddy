@@ -3,28 +3,15 @@ import { useState } from "react";
 
 import { Card, Header } from "../components";
 import { trips, images, features } from "../constants";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const user = useSelector((state) => state.user.user);
-  const [filter, setFilter] = useState("");
   const [search, setSearch] = useState("");
-
-  const handleFilterChange = (e) => {
-    setFilter(e.target.value);
-  };
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
   };
-
-  const filteredTrips = trips.filter((trip) => {
-    const isMatch =
-      trip.location.toLowerCase().includes(filter.toLowerCase()) &&
-      trip.cost <= parseInt(search);
-    return isMatch;
-  });
-
-  const displayedTrips = search === "" ? trips : filteredTrips;
 
   return (
     <div className="container">
@@ -66,18 +53,12 @@ const Home = () => {
           <div className="row">
             <input
               type="text"
-              id="location-filter"
-              value={filter}
-              onChange={handleFilterChange}
-              placeholder="Search by location"
-            />
-            <input
-              type="number"
-              id="cost-filter"
+              id="location-search"
               value={search}
               onChange={handleSearchChange}
-              placeholder="Filter by cost"
+              placeholder="Search by location"
             />
+            <a href={"/search?q=" + search} className="button">Explore</a>
           </div>
         </div>
         <div
@@ -88,8 +69,9 @@ const Home = () => {
             gridGap: "2rem",
           }}
         >
-          {displayedTrips.map((trip, index) => {
-            return <Card key={index} trip={trip} />;
+          {trips.map((trip, index) => {
+            const link = `/search?q=${trip.location} ${trip.name}`;
+            return (<Link to={link} key={index}><Card trip={trip} /></Link>);
           })}
         </div>
       </div>
